@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<DataEntity>
+  <Name value="Series" />
+  <Caption value="Series" />
+  <Children>
+    <Collection>
+      <Name value="season" />
+      <Caption value="Season" />
+      <Children>
+        <Attribute>
+          <Name value="number" />
+          <Caption value="Number" />
+          <IsRequired value="True" />
+          <DeclaredType>
+            <AttributeType>
+              <BaseType value="Integer" />
+              <IntMin value="1" />
+            </AttributeType>
+          </DeclaredType>
+        </Attribute>
+        <Collection>
+          <Name value="episodes" />
+          <Caption value="Episodes" />
+          <Children>
+            <Attribute>
+              <Name value="episodeName" />
+              <Caption value="Episode name" />
+              <DeclaredType>
+                <AttributeType />
+              </DeclaredType>
+            </Attribute>
+            <Collection>
+              <Name value="rating" />
+              <Caption value="Rating" />
+              <Children>
+                <Attribute>
+                  <Name value="dateOfWatching" />
+                  <Caption value="Date of watching" />
+                  <DeclaredType>
+                    <AttributeType>
+                      <BaseType value="Date" />
+                    </AttributeType>
+                  </DeclaredType>
+                </Attribute>
+                <Attribute>
+                  <Name value="seenItWhole" />
+                  <Caption value="Seen it whole" />
+                  <IsRequired value="True" />
+                  <DeclaredType>
+                    <AttributeType>
+                      <BaseType value="Bool" />
+                    </AttributeType>
+                  </DeclaredType>
+                </Attribute>
+                <Attribute>
+                  <Name value="score" />
+                  <Caption value="Score" />
+                  <DeclaredType>
+                    <AttributeType>
+                      <BaseType value="Integer" />
+                      <IntMax value="10" />
+                      <IntMin value="1" />
+                    </AttributeType>
+                  </DeclaredType>
+                </Attribute>
+              </Children>
+            </Collection>
+          </Children>
+        </Collection>
+      </Children>
+    </Collection>
+  </Children>
+</DataEntity>

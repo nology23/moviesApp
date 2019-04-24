@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<ApiObjectManifest>
+  <Name value="CodelistFilter" />
+  <CanBeFormLocal value="False" />
+  <CanBeGlobal value="False" />
+  <Generator value="*" />
+  <Methods>
+    <MethodManifest>
+      <Name value="filterByValidityDateTime" />
+      <ReturnType />
+      <Parameters>
+        <ParameterManifest>
+          <BaseType value="DateTime" />
+          <Name value="validityDate" />
+        </ParameterManifest>
+      </Parameters>
+    </MethodManifest>
+    <MethodManifest>
+      <Name value="excludeItemsByStringColumn" />
+      <ReturnType />
+      <Parameters>
+        <ParameterManifest>
+          <BaseType value="String" />
+          <Name value="columnName" />
+        </ParameterManifest>
+        <ParameterManifest>
+          <BaseType value="String" />
+          <Name value="value" />
+        </ParameterManifest>
+      </Parameters>
+    </MethodManifest>
+    <MethodManifest>
+      <Name value="excludeItemsByIntColumn" />
+      <ReturnType />
+      <Parameters>
+        <ParameterManifest>
+          <BaseType value="String" />
+          <Name value="columnName" />
+        </ParameterManifest>
+        <ParameterManifest>
+          <BaseType value="Integer" />
+          <Name value="value" />
+        </ParameterManifest>
+      </Parameters>
+    </MethodManifest>
+    <MethodManifest>
+      <Name value="excludeItemsByBoolColumn" />
+      <ReturnType />
+      <Parameters>
+        <ParameterManifest>
+          <BaseType value="String" />
+          <Name value="columnName" />
+        </ParameterManifest>
+        <ParameterManifest>
+          <BaseType value="Bool" />
+          <Name value="value" />
+        </ParameterManifest>
+      </Parameters>
+    </MethodManifest>
+    <MethodManifest>
+      <Name value="includeItemsByStringColumn" />
+      <ReturnType />
+      <Parameters>
+        <ParameterManifest>
+          <BaseType value="String" />
+          <Name value="columnName" />
+        </ParameterManifest>
+        <ParameterManifest>
+          <BaseType value="String" />
+          <Name value="value" />
+        </ParameterManifest>
+      </Parameters>
+    </MethodManifest>
+    <MethodManifest>
+      <Name value="includeItemsByIntColumn" />
+      <ReturnType />
+      <Parameters>
+        <ParameterManifest>
+          <BaseType value="String" />
+          <Name value="columnName" />
+        </ParameterManifest>
+        <ParameterManifest>
+          <BaseType value="Integer" />
+          <Name value="value" />
+        </ParameterManifest>
+      </Parameters>
+    </MethodManifest>
+    <MethodManifest>
+      <Name value="includeItemsByBoolColumn" />
+      <ReturnType />
+      <Parameters>
+        <ParameterManifest>
+          <BaseType value="String" />
+          <Name value="columnName" />
+        </ParameterManifest>
+        <ParameterManifest>
+          <BaseType value="Bool" />
+          <Name value="value" />
+        </ParameterManifest>
+      </Parameters>
+    </MethodManifest>
+    <MethodManifest>
+      <Name value="commit" />
+      <ReturnType />
+    </MethodManifest>
+    <MethodManifest>
+      <Name value="reset" />
+      <ReturnType />
+      <Parameters>
+        <ParameterManifest>
+          <BaseType value="Bool" />
+          <Name value="applyImmediately" />
+        </ParameterManifest>
+      </Parameters>
+    </MethodManifest>
+  </Methods>
+</ApiObjectManifest>

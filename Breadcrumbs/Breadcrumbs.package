@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<Package IsComponentLib="True">
+  <Identity value="Breadcrumbs.4d3eeadca3c54f1caa1d677db7e07acb" />
+  <Description value="Breadcrumbs component and controller api object " />
+  <Version value="1.0.2" />
+  <Items>
+    <ResourceItem ResourceName="Breadcrumbs.png" Action="None" OutputFileName="Breadcrumbs.png" Src="Breadcrumbs.png" />
+    <PackageItem Src="BreadcrumbsCtrl.apiObjectManifest" />
+    <PackageItem Src="Breadcrumb.apiObjectManifest" />
+    <ResourceItem ResourceName="breadcrumbsCtrl.js" Action="None" OutputFileName="breadcrumbsCtrl.js" Src="breadcrumbsCtrl.js" />
+    <ResourceItem ResourceName="breadcrumbs.js" LinkerAction="Script" OutputFileName="breadcrumbs.js" Src="breadcrumbs.js" />
+    <PackageItem Src="Breadcrumbs.componentManifest" />
+    <ResourceItem ResourceName="breadcrumbs.css" LinkerAction="Css" OutputFileName="breadcrumbs.css" Src="breadcrumbs.css" />
+  </Items>
+</Package>

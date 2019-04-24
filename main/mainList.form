@@ -1,0 +1,524 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<Form>
+  <Name value="mainList" />
+  <Caption value="Main list" />
+  <Content>
+    <Panel>
+      <Name value="panel1" />
+      <Orientation value="Vertical" />
+      <Panel.Height value="#" />
+      <Panel.Width value="*" />
+      <Children>
+        <Panel>
+          <Name value="panel2" />
+          <Orientation value="Vertical" />
+          <Panel.Height value="#" />
+          <Panel.Width value="*" />
+          <Children>
+            <Label>
+              <Name value="label1" />
+              <Data value="Info" />
+              <Heading value="h5" />
+              <Panel.Height value="#" />
+              <Panel.Width value="300px" />
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-label" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </Label>
+            <TextBox>
+              <Name value="textBox1" />
+              <CaptionVAlign value="Middle" />
+              <Panel.Height value="#" />
+              <Panel.Width value="50%" />
+              <Bindings>
+                <Binding SourceProperty="Data" Expression="complex.id" />
+                <Binding SourceProperty="IsRequiredMarkVisible" Expression="complex.id.isRequired()" />
+                <Binding SourceProperty="Caption" Expression="complex.id.caption()" />
+              </Bindings>
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-textbox" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </TextBox>
+            <TextBox>
+              <Name value="textBox2" />
+              <CaptionVAlign value="Middle" />
+              <Panel.Height value="#" />
+              <Panel.Width value="50%" />
+              <Bindings>
+                <Binding SourceProperty="Data" Expression="complex.name" />
+                <Binding SourceProperty="IsRequiredMarkVisible" Expression="complex.name.isRequired()" />
+                <Binding SourceProperty="Caption" Expression="complex.name.caption()" />
+              </Bindings>
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-textbox" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </TextBox>
+            <TextBox>
+              <Name value="textBox3" />
+              <CaptionVAlign value="Middle" />
+              <Panel.Height value="#" />
+              <Panel.Width value="50%" />
+              <Bindings>
+                <Binding SourceProperty="Data" Expression="complex.yearOfRelease" />
+                <Binding SourceProperty="IsRequiredMarkVisible" Expression="complex.yearOfRelease.isRequired()" />
+                <Binding SourceProperty="Caption" Expression="complex.yearOfRelease.caption()" />
+              </Bindings>
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-textbox" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </TextBox>
+            <TextBox>
+              <Name value="textBox4" />
+              <CaptionVAlign value="Middle" />
+              <Panel.Height value="#" />
+              <Panel.Width value="50%" />
+              <Bindings>
+                <Binding SourceProperty="Data" Expression="complex.mainDirector" />
+                <Binding SourceProperty="IsRequiredMarkVisible" Expression="complex.mainDirector.isRequired()" />
+                <Binding SourceProperty="Caption" Expression="complex.mainDirector.caption()" />
+              </Bindings>
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-textbox" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </TextBox>
+            <TextBox>
+              <Name value="textBox5" />
+              <CaptionVAlign value="Middle" />
+              <Panel.Height value="#" />
+              <Panel.Width value="50%" />
+              <Bindings>
+                <Binding SourceProperty="Data" Expression="complex.description" />
+                <Binding SourceProperty="IsRequiredMarkVisible" Expression="complex.description.isRequired()" />
+                <Binding SourceProperty="Caption" Expression="complex.description.caption()" />
+              </Bindings>
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-textbox" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </TextBox>
+            <Panel>
+              <Name value="panel3" />
+              <Orientation value="Vertical" />
+              <Panel.Height value="#" />
+              <Panel.Width value="*" />
+              <Children>
+                <TextBox>
+                  <Name value="textBox6" />
+                  <CaptionVAlign value="Middle" />
+                  <Panel.Height value="#" />
+                  <Panel.Width value="50%" />
+                  <Bindings>
+                    <Binding SourceProperty="Data" Expression="complex.starring.actorName" />
+                    <Binding SourceProperty="IsRequiredMarkVisible" Expression="complex.starring.actorName.isRequired()" />
+                    <Binding SourceProperty="Caption" Expression="complex.starring.actorName.caption()" />
+                  </Bindings>
+                  <CssClass>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-textbox" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                  </CssClass>
+                </TextBox>
+              </Children>
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-panel" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </Panel>
+            <Panel>
+              <Name value="panel4" />
+              <Orientation value="Vertical" />
+              <Panel.Height value="#" />
+              <Panel.Width value="*" />
+              <Children>
+                <Label>
+                  <Name value="label3" />
+                  <Data value="Ratting" />
+                  <Heading value="h5" />
+                  <Panel.Height value="#" />
+                  <Panel.Width value="300px" />
+                  <CssClass>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-label" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                  </CssClass>
+                </Label>
+                <CheckBox>
+                  <Name value="checkBox1" />
+                  <Panel.Height value="#" />
+                  <Panel.Width value="300px" />
+                  <Bindings>
+                    <Binding SourceProperty="Data" Expression="complex.ratting.seenItWhole" />
+                    <Binding SourceProperty="IsRequiredMarkVisible" Expression="complex.ratting.seenItWhole.isRequired()" />
+                    <Binding SourceProperty="Caption" Expression="complex.ratting.seenItWhole.caption()" />
+                  </Bindings>
+                  <CssClass>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-checkbox" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                  </CssClass>
+                </CheckBox>
+                <DatePicker>
+                  <Name value="datePicker1" />
+                  <Panel.Height value="#" />
+                  <Panel.Width value="300px" />
+                  <Bindings>
+                    <Binding SourceProperty="Data" Expression="complex.ratting.dateOfWatching" />
+                    <Binding SourceProperty="IsRequiredMarkVisible" Expression="complex.ratting.dateOfWatching.isRequired()" />
+                    <Binding SourceProperty="Caption" Expression="complex.ratting.dateOfWatching.caption()" />
+                    <Binding SourceProperty="IsVisible" Expression="form.complex.ratting.seenItWhole" />
+                  </Bindings>
+                  <CssClass>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-datepicker" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                  </CssClass>
+                </DatePicker>
+                <TextBox>
+                  <Name value="textBox7" />
+                  <CaptionVAlign value="Middle" />
+                  <Panel.Height value="#" />
+                  <Panel.Width value="300px" />
+                  <Bindings>
+                    <Binding SourceProperty="Data" Expression="complex.ratting.score" />
+                    <Binding SourceProperty="IsRequiredMarkVisible" Expression="complex.ratting.score.isRequired()" />
+                    <Binding SourceProperty="Caption" Expression="complex.ratting.score.caption()" />
+                    <Binding SourceProperty="IsVisible" Expression="form.complex.ratting.seenItWhole" />
+                  </Bindings>
+                  <CssClass>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-textbox" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                  </CssClass>
+                </TextBox>
+              </Children>
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-panel" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </Panel>
+            <EnumCombo>
+              <Name value="enumCombo1" />
+              <Panel.Height value="#" />
+              <Panel.Width value="300px" />
+              <Bindings>
+                <Binding SourceProperty="Data" Expression="complex.type" />
+                <Binding SourceProperty="IsRequiredMarkVisible" Expression="complex.type.isRequired()" />
+                <Binding SourceProperty="Caption" Expression="complex.type.caption()" />
+              </Bindings>
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-enumcombo" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </EnumCombo>
+            <Panel>
+              <Name value="panel5" />
+              <Orientation value="Vertical" />
+              <Panel.Height value="#" />
+              <Panel.Width value="*" />
+              <Bindings>
+                <Binding SourceProperty="IsVisible" Expression="form.seriesVisible" />
+              </Bindings>
+              <Children>
+                <Label>
+                  <Name value="label4" />
+                  <Data value="Info season" />
+                  <Heading value="h5" />
+                  <Panel.Height value="#" />
+                  <Panel.Width value="300px" />
+                  <CssClass>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-label" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                  </CssClass>
+                </Label>
+                <TextBox>
+                  <Name value="textBox8" />
+                  <CaptionVAlign value="Middle" />
+                  <Panel.Height value="#" />
+                  <Panel.Width value="300px" />
+                  <Bindings>
+                    <Binding SourceProperty="Data" Expression="complex.seasons.number" />
+                    <Binding SourceProperty="IsRequiredMarkVisible" Expression="complex.seasons.number.isRequired()" />
+                    <Binding SourceProperty="Caption" Expression="complex.seasons.number.caption()" />
+                  </Bindings>
+                  <CssClass>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-textbox" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                  </CssClass>
+                </TextBox>
+                <Panel>
+                  <Name value="panel6" />
+                  <Orientation value="Vertical" />
+                  <Panel.Height value="#" />
+                  <Panel.Width value="*" />
+                  <Children>
+                    <TextBox>
+                      <Name value="textBox9" />
+                      <CaptionVAlign value="Middle" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="300px" />
+                      <Bindings>
+                        <Binding SourceProperty="Data" Expression="complex.seasons.episodes.episodeName" />
+                        <Binding SourceProperty="IsRequiredMarkVisible" Expression="complex.seasons.episodes.episodeName.isRequired()" />
+                        <Binding SourceProperty="Caption" Expression="complex.seasons.episodes.episodeName.caption()" />
+                      </Bindings>
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-textbox" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </TextBox>
+                  </Children>
+                  <CssClass>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-panel" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                  </CssClass>
+                </Panel>
+                <Panel>
+                  <Name value="panel7" />
+                  <Orientation value="Vertical" />
+                  <Panel.Height value="#" />
+                  <Panel.Width value="*" />
+                  <Children>
+                    <Label>
+                      <Name value="label5" />
+                      <Data value="Ratting episode" />
+                      <Heading value="h5" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="300px" />
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-label" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </Label>
+                    <CheckBox>
+                      <Name value="checkBox2" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="300px" />
+                      <Bindings>
+                        <Binding SourceProperty="Data" Expression="complex.seasons.ratingEpisode.seenItWhole" />
+                        <Binding SourceProperty="IsRequiredMarkVisible" Expression="complex.seasons.ratingEpisode.seenItWhole.isRequired()" />
+                        <Binding SourceProperty="Caption" Expression="complex.seasons.ratingEpisode.seenItWhole.caption()" />
+                      </Bindings>
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-checkbox" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </CheckBox>
+                    <DatePicker>
+                      <Name value="datePicker2" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="300px" />
+                      <Bindings>
+                        <Binding SourceProperty="Data" Expression="complex.seasons.ratingEpisode.dateOfWatching" />
+                        <Binding SourceProperty="IsRequiredMarkVisible" Expression="complex.seasons.ratingEpisode.dateOfWatching.isRequired()" />
+                        <Binding SourceProperty="Caption" Expression="complex.seasons.ratingEpisode.dateOfWatching.caption()" />
+                        <Binding SourceProperty="IsVisible" Expression="form.complex.seasons.ratingEpisode.seenItWhole" />
+                      </Bindings>
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-datepicker" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </DatePicker>
+                    <TextBox>
+                      <Name value="textBox10" />
+                      <CaptionVAlign value="Middle" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="300px" />
+                      <Bindings>
+                        <Binding SourceProperty="Data" Expression="complex.seasons.ratingEpisode.score" />
+                        <Binding SourceProperty="IsRequiredMarkVisible" Expression="complex.seasons.ratingEpisode.score.isRequired()" />
+                        <Binding SourceProperty="Caption" Expression="complex.seasons.ratingEpisode.score.caption()" />
+                        <Binding SourceProperty="IsVisible" Expression="form.complex.seasons.ratingEpisode.seenItWhole" />
+                      </Bindings>
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-textbox" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </TextBox>
+                  </Children>
+                  <CssClass>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-panel" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                  </CssClass>
+                </Panel>
+              </Children>
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-panel" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </Panel>
+          </Children>
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-panel" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </Panel>
+      </Children>
+      <CssClass>
+        <CssClassConditional>
+          <ClassName value="{theme}-panel" />
+          <IsThemedStyle value="True" />
+        </CssClassConditional>
+      </CssClass>
+    </Panel>
+  </Content>
+  <DataContext>
+    <DataContext>
+      <OnUserChange>
+        <ActionEvent ReferencedAction="+UiParts.mainList.handler_dataContext1_OnUserChange" />
+      </OnUserChange>
+      <Children>
+        <Complex>
+          <Name value="complex" />
+          <Caption value="Complex" />
+          <Children>
+            <Include>
+              <Include reference="+DataEntities.movie" />
+            </Include>
+            <Complex>
+              <Name value="starring" />
+              <Caption value="Starring" />
+              <Children>
+                <Include>
+                  <Include reference="+DataEntities.staring" />
+                </Include>
+              </Children>
+            </Complex>
+            <Complex>
+              <Name value="ratting" />
+              <Caption value="Ratting" />
+              <Children>
+                <Include>
+                  <Include reference="+DataEntities.ratingMovies" />
+                </Include>
+              </Children>
+            </Complex>
+            <Attribute>
+              <Name value="type" />
+              <Caption value="Type" />
+              <IsRequired value="True" />
+              <MetaType reference="+MetaTypes.type" />
+            </Attribute>
+            <Complex>
+              <Name value="seasons" />
+              <Caption value="Seasons" />
+              <Children>
+                <Include>
+                  <Include reference="+DataEntities.seasons" />
+                </Include>
+                <Complex>
+                  <Name value="episodes" />
+                  <Caption value="Episodes" />
+                  <Children>
+                    <Include>
+                      <Include reference="+DataEntities.episodes" />
+                    </Include>
+                  </Children>
+                </Complex>
+                <Complex>
+                  <Name value="ratingEpisode" />
+                  <Caption value="Rating episode" />
+                  <Children>
+                    <Include>
+                      <Include reference="+DataEntities.ratingSeries" />
+                    </Include>
+                  </Children>
+                </Complex>
+              </Children>
+            </Complex>
+          </Children>
+        </Complex>
+        <Attribute>
+          <Name value="seriesVisible" />
+          <Caption value="Series visible" />
+          <DataContextParameter.IsInput value="True" />
+          <DataContextParameter.IsInputRequired value="True" />
+          <IsRequired value="True" />
+          <DeclaredType>
+            <AttributeType>
+              <BaseType value="Bool" />
+            </AttributeType>
+          </DeclaredType>
+        </Attribute>
+      </Children>
+    </DataContext>
+  </DataContext>
+  <OnCreate>
+    <ActionEvent ReferencedAction="~init" />
+  </OnCreate>
+  <Actions>
+    <ActionBlock>
+      <Name value="init" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[//asds]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="handler_dataContext1_OnUserChange" />
+      <IsPrivate value="True" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[if form.complex.type.enumValue() = "series" then
+	form.seriesVisible = true
+	else
+	form.seriesVisible = false
+endif]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+  </Actions>
+</Form>

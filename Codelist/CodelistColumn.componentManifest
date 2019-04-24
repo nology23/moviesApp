@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<ComponentManifest>
+  <Name value="CodelistColumn" />
+  <Generator value="*" />
+  <Type value="Object" />
+  <Properties>
+    <PropertyManifest>
+      <Name value="columnName" />
+      <Type value="string" />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="dataType" />
+      <Default value="string" />
+      <Type value="string" />
+      <UiEditor value="list/string|integer|decimal|boolean|date|datetime" />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="columnRole" />
+      <Type value="string" />
+      <UiEditor value="list/Key|Description|ValidityStart|ValidityEnd" />
+    </PropertyManifest>
+  </Properties>
+</ComponentManifest>

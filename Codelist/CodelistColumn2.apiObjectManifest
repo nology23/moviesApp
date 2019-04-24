@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.300"?>
+<ApiObjectManifest>
+  <Name value="CodelistColumn2" />
+  <CanBeFormLocal value="False" />
+  <CanBeGlobal value="False" />
+  <Generator value="*" />
+  <Properties>
+    <PropertyManifest>
+      <Name value="type" />
+      <IsRequired value="True" />
+      <UiEditor value="list/string|integer|decimal|boolean|date|datetime" />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="isKeyColumn" />
+      <Type value="bool" />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="isDescriptionMember" />
+      <Type value="bool" />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="isValidityDateStart" />
+      <Type value="bool" />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="isValidityDateEnd" />
+      <Type value="bool" />
+    </PropertyManifest>
+  </Properties>
+</ApiObjectManifest>

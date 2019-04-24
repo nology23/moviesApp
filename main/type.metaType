@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<MetaType>
+  <Name value="type" />
+  <Caption value="Type" />
+  <TypeSpec>
+    <AttributeType>
+      <BaseType value="Enum" />
+      <EnumValues>
+        <AttributeEnumValue>
+          <Name value="movie" />
+          <Caption value="Movie" />
+          <Value value="movie" />
+        </AttributeEnumValue>
+        <AttributeEnumValue>
+          <Name value="series" />
+          <Caption value="Series" />
+          <Value value="series" />
+        </AttributeEnumValue>
+      </EnumValues>
+    </AttributeType>
+  </TypeSpec>
+</MetaType>

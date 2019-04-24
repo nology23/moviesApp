@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<GlobalApiObjects>
+  <Name value="globalApiObjects" />
+  <ApiObjects>
+    <ServerConnection identity="ServerConnection.db7b3eef075548988df768923691922c">
+      <Name value="serverConnection1" />
+      <rootUrl value="localhost:8080/" />
+    </ServerConnection>
+  </ApiObjects>
+</GlobalApiObjects>

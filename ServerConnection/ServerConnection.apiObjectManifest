@@ -1,0 +1,172 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<ApiObjectManifest>
+  <Name value="ServerConnection" />
+  <Generator value="serverConnection.js" />
+  <Contracts>
+    <ImplementsContractManifest>
+      <Name value="IServerConnection" />
+    </ImplementsContractManifest>
+    <ImplementsContractManifest>
+      <Name value="ICodelistProvider" />
+    </ImplementsContractManifest>
+  </Contracts>
+  <Events>
+    <EventManifest>
+      <Name value="OnIsAliveTimeout" />
+      <Parameters>
+        <EventParameterManifest>
+          <Name value="data" />
+        </EventParameterManifest>
+      </Parameters>
+    </EventManifest>
+    <EventManifest>
+      <Name value="OnCodelistsChanged" />
+      <Parameters>
+        <EventParameterManifest>
+          <Name value="data" />
+        </EventParameterManifest>
+      </Parameters>
+    </EventManifest>
+  </Events>
+  <Methods>
+    <MethodManifest>
+      <Name value="getAsync" />
+      <ReturnType>
+        <ObjectType reference="+Components.Response" />
+      </ReturnType>
+      <Parameters>
+        <ParameterManifest>
+          <BaseType value="String" />
+          <IsRequired value="True" />
+          <Name value="url" />
+        </ParameterManifest>
+      </Parameters>
+    </MethodManifest>
+    <MethodManifest>
+      <Name value="postAsync" />
+      <ReturnType>
+        <ObjectType reference="+Components.Response" />
+      </ReturnType>
+      <Parameters>
+        <ParameterManifest>
+          <BaseType value="String" />
+          <Name value="url" />
+        </ParameterManifest>
+        <ParameterManifest>
+          <BaseType value="String" />
+          <Name value="data" />
+        </ParameterManifest>
+      </Parameters>
+    </MethodManifest>
+    <MethodManifest>
+      <Name value="setLanguage" />
+      <ReturnType />
+      <Parameters>
+        <ParameterManifest>
+          <BaseType value="String" />
+          <Name value="value" />
+        </ParameterManifest>
+      </Parameters>
+    </MethodManifest>
+    <MethodManifest>
+      <Name value="setVersion" />
+      <ReturnType />
+      <Parameters>
+        <ParameterManifest>
+          <BaseType value="String" />
+          <Name value="value" />
+        </ParameterManifest>
+      </Parameters>
+    </MethodManifest>
+    <MethodManifest>
+      <Name value="setHeader" />
+      <ReturnType />
+      <Parameters>
+        <ParameterManifest>
+          <BaseType value="String" />
+          <Name value="name" />
+        </ParameterManifest>
+        <ParameterManifest>
+          <BaseType value="String" />
+          <Name value="value" />
+        </ParameterManifest>
+      </Parameters>
+    </MethodManifest>
+    <MethodManifest>
+      <Name value="getCsrfToken" />
+      <ReturnType>
+        <BaseType value="String" />
+      </ReturnType>
+    </MethodManifest>
+    <MethodManifest>
+      <Name value="setIsAliveTimeout" />
+      <Description value="Sets isAlive timeout in minutes" />
+      <ReturnType />
+      <Parameters>
+        <ParameterManifest>
+          <BaseType value="Integer" />
+          <Name value="isAliveTimeout" />
+          <UiDescription value="Number of minutes from last server response after which to trigger client is not alive" />
+        </ParameterManifest>
+      </Parameters>
+    </MethodManifest>
+    <MethodManifest>
+      <Name value="getIsAliveTimeout" />
+      <Description value="Gets isAlive timeout in minutes" />
+      <ReturnType>
+        <BaseType value="Integer" />
+      </ReturnType>
+    </MethodManifest>
+  </Methods>
+  <Properties>
+    <PropertyManifest>
+      <Name value="rootUrl" />
+      <Type value="string" />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="codelistsUrl" />
+      <Default value="codelists/" />
+      <Type value="string" />
+      <UiCaption value="Codelists URL part (i.e. /codelists/)" />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="listsUrl" />
+      <Default value="datasets/" />
+      <Type value="string" />
+      <UiCaption value="DeclLists part of url (ie. /datasets/)" />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="withCredentials" />
+      <Type value="bool" />
+      <UiCaption value="withCredentials" />
+      <UiDescription value="Set to true if you need XmlHttpRequest to be done with this parameter. It is relevant in case you are using NT authentication and endpoint is on different port/server than client application." />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="useCsrfToken" />
+      <Type value="bool" />
+      <UiCaption value="Use CSRF token" />
+      <UiCategory value="CSRF" />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="csrfTokenHeader" />
+      <Default value="X-CSRFToken" />
+      <Type value="string" />
+      <UiCaption value="CSRF token header name" />
+      <UiCategory value="CSRF" />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="csrfTokenUrl" />
+      <Default value="/GetCSRFToken" />
+      <Type value="string" />
+      <UiCaption value="CSRF token URL" />
+      <UiCategory value="CSRF" />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="codelistsLastChangeHeader" />
+      <Default value="X-CodelistsLastChange" />
+      <Type value="string" />
+      <UiCaption value="Last codelists change header name" />
+    </PropertyManifest>
+  </Properties>
+</ApiObjectManifest>

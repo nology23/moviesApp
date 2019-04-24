@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<Package IsComponentLib="True">
+  <Identity value="labeledText.a92a691d6915448ebf9f0b804ce6a733" />
+  <Version value="1.0.4" />
+  <Items>
+    <PackageItem Src="LabeledText.componentManifest" />
+    <ResourceItem ResourceName="labeledTextGenerator.js" Action="None" OutputFileName="labeledTextGenerator.js" Src="labeledTextGenerator.js" />
+    <ResourceItem ResourceName="labeledText.js" LinkerAction="Script" OutputFileName="labeledText.js" Src="labeledText.js" />
+  </Items>
+</Package>

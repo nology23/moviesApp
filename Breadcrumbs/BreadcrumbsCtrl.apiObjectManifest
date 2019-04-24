@@ -1,0 +1,135 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<ApiObjectManifest>
+  <Name value="BreadcrumbsCtrl" />
+  <Generator value="breadcrumbsCtrl.js" />
+  <Contracts>
+    <ImplementsContractManifest>
+      <Name value="IBreadcrumbsCtrl" />
+    </ImplementsContractManifest>
+  </Contracts>
+  <Methods>
+    <MethodManifest>
+      <Name value="addBreadcrumb" />
+      <Description value="Add new breadcrumb" />
+      <ReturnType />
+      <Parameters>
+        <ParameterManifest>
+          <BaseType value="String" />
+          <Name value="id" />
+          <UiDescription value="Breadcrumb id" />
+        </ParameterManifest>
+        <ParameterManifest>
+          <BaseType value="String" />
+          <Name value="titleOrTitlePath" />
+          <UiDescription value="Breadcrumb title or name of control struct property holding Title" />
+        </ParameterManifest>
+        <ParameterManifest>
+          <BaseType value="String" />
+          <Name value="url" />
+          <UiDescription value="Breadcrumb url" />
+        </ParameterManifest>
+        <ParameterManifest>
+          <BaseType value="String" />
+          <Name value="data" />
+          <UiDescription value="Breadcrumb user data" />
+        </ParameterManifest>
+        <ParameterManifest>
+          <BaseType value="Bool" />
+          <Name value="clickable" />
+          <UiDescription value="Clickable (anchor) or not (span)" />
+        </ParameterManifest>
+      </Parameters>
+    </MethodManifest>
+    <MethodManifest>
+      <Name value="removeLast" />
+      <Description value="Remove last breadcrumb" />
+      <ReturnType />
+    </MethodManifest>
+    <MethodManifest>
+      <Name value="removeTo" />
+      <Description value="Remove breadcrumbs with index greater or equal given parameter" />
+      <ReturnType />
+      <Parameters>
+        <ParameterManifest>
+          <BaseType value="Integer" />
+          <Name value="index" />
+        </ParameterManifest>
+      </Parameters>
+    </MethodManifest>
+    <MethodManifest>
+      <Name value="removeAll" />
+      <Description value="Remove all breadcrumbs" />
+      <ReturnType />
+    </MethodManifest>
+    <MethodManifest>
+      <Name value="count" />
+      <Description value="Get breadcrumbs count" />
+      <ReturnType>
+        <BaseType value="Integer" />
+      </ReturnType>
+    </MethodManifest>
+    <MethodManifest>
+      <Name value="getItem" />
+      <Description value="Get breadcrumb on specified position in collection" />
+      <ReturnType>
+        <ObjectType reference="+Components.Breadcrumb" />
+      </ReturnType>
+      <Parameters>
+        <ParameterManifest>
+          <BaseType value="Integer" />
+          <Name value="index" />
+          <UiDescription value="Zero based item index" />
+        </ParameterManifest>
+      </Parameters>
+    </MethodManifest>
+    <MethodManifest>
+      <Name value="getItemJson" />
+      <Description value="Get breadcrumb JSON on specified position in collection" />
+      <ReturnType>
+        <BaseType value="String" />
+      </ReturnType>
+      <Parameters>
+        <ParameterManifest>
+          <BaseType value="Integer" />
+          <Name value="index" />
+          <UiDescription value="Zero based item index" />
+        </ParameterManifest>
+      </Parameters>
+    </MethodManifest>
+    <MethodManifest>
+      <Name value="getAllJson" />
+      <Description value="Get all breadcrumbs JSON" />
+      <ReturnType>
+        <BaseType value="String" />
+      </ReturnType>
+    </MethodManifest>
+    <MethodManifest>
+      <Name value="getFullPath" />
+      <Description value="Get full path of entire breadcrumbs set" />
+      <ReturnType>
+        <BaseType value="String" />
+      </ReturnType>
+    </MethodManifest>
+    <MethodManifest>
+      <Name value="init" />
+      <Description value="Controller init - call as first method" />
+      <ReturnType />
+      <Parameters>
+        <ParameterManifest>
+          <BaseType value="String" />
+          <Name value="controlStruct" />
+          <UiDescription value="Name of control struct. If global, pass as [package]::[structName], f.e. main::myStructName" />
+        </ParameterManifest>
+      </Parameters>
+    </MethodManifest>
+  </Methods>
+  <Properties>
+    <PropertyManifest>
+      <Name value="OnChange" />
+      <Type value="ScreenFactory.Data.Model.Actions.ActionEvent" />
+      <UiCategory value="Events" />
+      <UiDescription value="Fired when adding to or removing from breadcrumbs collection" />
+    </PropertyManifest>
+  </Properties>
+</ApiObjectManifest>

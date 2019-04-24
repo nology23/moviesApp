@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<Package IsComponentLib="True">
+  <Identity value="Codelist.2fd2d7af4a6d445bad8a58610632f8e0" />
+  <Version value="3.11.0" />
+  <Items>
+    <PackageItem Src="CodelistItem.apiObjectManifest" />
+    <PackageItem Src="CodelistColumn.componentManifest" />
+    <PackageItem Src="Codelist.apiObjectManifest" />
+    <ResourceItem ResourceName="codelist.js" Action="None" OutputFileName="codelist.js" Src="codelist.js" />
+    <PackageItem Src="FilteredCodelist.apiObjectManifest" />
+    <ResourceItem ResourceName="filteredCodelist.js" Action="None" OutputFileName="filteredCodelist.js" Src="filteredCodelist.js" />
+    <PackageItem Src="CodelistFilter.apiObjectManifest" />
+  </Items>
+</Package>

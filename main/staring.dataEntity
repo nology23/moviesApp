@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<DataEntity>
+  <Name value="staring" />
+  <Caption value="Staring" />
+  <Children>
+    <Attribute>
+      <Name value="actorName" />
+      <Caption value="Actor name" />
+      <IsRequired value="True" />
+      <DeclaredType>
+        <AttributeType />
+      </DeclaredType>
+    </Attribute>
+  </Children>
+</DataEntity>

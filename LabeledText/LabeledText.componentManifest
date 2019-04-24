@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<ComponentManifest>
+  <Name value="LabeledText" />
+  <Generator value="labeledTextGenerator.js" />
+  <Type value="Editor" />
+  <Properties>
+    <PropertyManifest>
+      <Name value="Data" />
+      <Bindable value="OneWay" />
+      <Type value="string" />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="IsCurrency" />
+      <Type value="bool" />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="IsAmount" />
+      <Type value="bool" />
+    </PropertyManifest>
+  </Properties>
+</ComponentManifest>

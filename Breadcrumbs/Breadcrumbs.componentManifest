@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<ComponentManifest>
+  <Name value="Breadcrumbs" />
+  <Generator value="&lt;sffw-breadcrumbs&gt;" />
+  <Type value="Control" />
+  <UiCaption value="Breadcrumbs" />
+  <UiIcon value="Breadcrumbs.png" />
+  <Events>
+    <EventManifest>
+      <Name value="OnItemClick" />
+      <Parameters>
+        <EventParameterManifest>
+          <Name value="index" />
+          <BaseType value="Integer" />
+          <ParamType value="BaseType" />
+        </EventParameterManifest>
+        <EventParameterManifest>
+          <Name value="id" />
+          <BaseType value="String" />
+          <ParamType value="BaseType" />
+        </EventParameterManifest>
+        <EventParameterManifest>
+          <Name value="title" />
+          <BaseType value="String" />
+          <ParamType value="BaseType" />
+        </EventParameterManifest>
+        <EventParameterManifest>
+          <Name value="url" />
+          <BaseType value="String" />
+          <ParamType value="BaseType" />
+        </EventParameterManifest>
+        <EventParameterManifest>
+          <Name value="data" />
+          <BaseType value="String" />
+          <ParamType value="BaseType" />
+        </EventParameterManifest>
+        <EventParameterManifest>
+          <Name value="fullPath" />
+          <BaseType value="String" />
+          <ParamType value="BaseType" />
+        </EventParameterManifest>
+      </Parameters>
+    </EventManifest>
+  </Events>
+  <Properties>
+    <PropertyManifest>
+      <Name value="controller" />
+      <Type value="ApiObject" />
+      <UiCategory value="Common" />
+      <UiEditor value="contract/IBreadcrumbsCtrl" />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="cssClass" />
+      <Default value="breadcrumb breadcrumb-default" />
+      <IsRequired value="True" />
+      <Type value="string" />
+      <UiCategory value="Appearance" />
+    </PropertyManifest>
+  </Properties>
+</ComponentManifest>
