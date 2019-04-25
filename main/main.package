@@ -3,16 +3,20 @@
 <Package>
   <Identity value="main.5d933019146e4c6a85876a4e907c907a" />
   <Items>
+    <PackageItem Src="episodes.dataEntity" />
+    <PackageItem Src="genres.metaType" />
+    <PackageItem Src="globalApiObjects.globalApiObjects" />
     <PackageItem Src="mainList.form" />
     <PackageItem Src="master.form" />
-    <PackageItem Src="globalApiObjects.globalApiObjects" />
     <PackageItem Src="movie.dataEntity" />
-    <PackageItem Src="seasons.dataEntity" />
-    <PackageItem Src="episodes.dataEntity" />
-    <PackageItem Src="ratingSeries.dataEntity" />
     <PackageItem Src="ratingMovies.dataEntity" />
+    <PackageItem Src="ratingSeries.dataEntity" />
+    <PackageItem Src="seasons.dataEntity" />
     <PackageItem Src="staring.dataEntity" />
-    <PackageItem Src="genres.metaType" />
     <PackageItem Src="type.metaType" />
+    <ResourceItem ResourceName="groupBox.css" LinkerAction="Css" OutputFileName="groupBox.css" Src="groupBox.css" />
+    <PackageItem Src="globalVariables.globalVariables" />
+    <PackageItem Src="detailMovie.form" />
+    <PackageItem Src="globalActions.globalActions" />
   </Items>
 </Package>

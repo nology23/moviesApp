@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<Package IsComponentLib="True">
+  <Identity value="referenceLookup.10b2d4db46e641b5bba23b33e3568c2e" />
+  <Version value="2.4.0" />
+  <Items>
+    <PackageItem Src="ReferenceLookup.componentManifest" />
+    <ResourceItem ResourceName="referenceLookup.css" LinkerAction="Css" OutputFileName="referenceLookup.css" Src="referenceLookup.css" />
+    <ResourceItem ResourceName="referenceLookup.js" LinkerAction="Script" OutputFileName="referenceLookup.js" Src="referenceLookup.js" />
+    <ResourceItem ResourceName="referenceLookupGenerator.js" Action="None" OutputFileName="referenceLookupGenerator.js" Src="referenceLookupGenerator.js" />
+  </Items>
+</Package>

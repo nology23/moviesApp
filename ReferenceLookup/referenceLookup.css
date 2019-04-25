@@ -1,0 +1,11 @@
+﻿.your_button_class_name_here {
+    font-size: 20px;
+    font-weight: bold;
+}
+.ui-autocomplete {
+    line-height: 20px;
+}
+/*--eliminate jquery ui autocomplete unwanted horizontal scrollbar--*/
+.ui-state-active {
+    margin: 0 !important;
+}

@@ -5,7 +5,9 @@
   <ApiObjects>
     <ServerConnection identity="ServerConnection.db7b3eef075548988df768923691922c">
       <Name value="serverConnection1" />
-      <rootUrl value="localhost:8080/" />
+      <codelistsUrl value="" />
+      <listsUrl value="" />
+      <rootUrl value="http://localhost:8080/" />
     </ServerConnection>
   </ApiObjects>
 </GlobalApiObjects>

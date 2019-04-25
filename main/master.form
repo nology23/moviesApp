@@ -14,6 +14,7 @@
           <Name value="label1" />
           <Data value="Movies App" />
           <Heading value="h1" />
+          <Margin value="26, 6, 26, 6 px" />
           <Panel.Height value="#" />
           <Panel.HorizontalAlignment value="Center" />
           <Panel.Width value="300px" />

@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<ComponentManifest>
+  <Name value="ReferenceLookup" />
+  <Generator value="referenceLookupGenerator.js" />
+  <Type value="Editor" />
+  <Properties>
+    <PropertyManifest>
+      <Name value="Data" />
+      <Bindable value="True" />
+      <IsRequired value="True" />
+      <Type value="ScreenFactory.Data.Model.DataStructures.DataReferenceAttribute" />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="DataApiObject" />
+      <Bindable value="True" />
+      <IsRequired value="True" />
+      <Type value="ApiObject" />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="MinChars" />
+      <Default value="1" />
+      <Type value="integer" />
+      <UiCaption value="Minimum characters" />
+      <UiCategory value="Behaviour" />
+      <UiDescription value="Minimum characters before dropdown is shown." />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="DisplayMember" />
+      <Type value="string" />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="PanelClass" />
+      <Default value="contentPanel" />
+      <Type value="string" />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="IsEnabled" />
+      <Bindable value="True" />
+      <Default value="True" />
+      <Type value="bool" />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="useContains" />
+      <Default value="True" />
+      <Type value="bool" />
+      <UiCaption value="Use 'contains'" />
+      <UiCategory value="Behaviour" />
+      <UiDescription value="Contains instead of startwith" />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="immediateUpdate" />
+      <Default value="False" />
+      <Type value="bool" />
+      <UiCategory value="Behaviour" />
+      <UiDescription value="If set to true, bound Data structure is updated after item selection, otherwise after leaving the input field" />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="expectLinebreaksInValues" />
+      <Default value="False" />
+      <Type value="bool" />
+      <UiCategory value="Behaviour" />
+      <UiDescription value="Should be set to true only if item descriptions could contain line breaks or tabs, otherwise set to false due to better server performance" />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="resultSorting" />
+      <Default value="advanced" />
+      <Type value="string" />
+      <UiCategory value="Behaviour" />
+      <UiDescription value="advanced (use only when DisplayMember is bound to client description column created with 'Key-Description' method, otherwise will be ignored): full match of code, then partial match of description from beginning, then partial match of description anywhere; basic: sorted on server (use for backward compatibility) " />
+      <UiEditor value="list/advanced|basic" />
+    </PropertyManifest>
+  </Properties>
+</ComponentManifest>

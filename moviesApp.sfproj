@@ -46,5 +46,9 @@
       <ReferencedIdentity value="ServerConnection.db7b3eef075548988df768923691922c" />
       <ReferencedVersion value="3.1.1" />
     </PackageReference>
+    <PackageReference Alias="referenceLookup" IsComponentLib="True" Origin="ReferenceLookup\ReferenceLookup.package">
+      <ReferencedIdentity value="referenceLookup.10b2d4db46e641b5bba23b33e3568c2e" />
+      <ReferencedVersion value="2.4.0" />
+    </PackageReference>
   </PackageReferences>
 </ProjectRoot>
