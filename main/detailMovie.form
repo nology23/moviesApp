@@ -11,6 +11,35 @@
       <Panel.Width value="*" />
       <Children>
         <Panel>
+          <Name value="panel2" />
+          <Orientation value="Vertical" />
+          <Panel.Height value="#" />
+          <Panel.Width value="*" />
+          <Children>
+            <Button>
+              <Name value="bntBack" />
+              <Caption value="Main" />
+              <Panel.Height value="#" />
+              <Panel.Width value="150px" />
+              <OnClick>
+                <ActionEvent ReferencedAction="~handler_bntBack_OnClick" />
+              </OnClick>
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-button" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </Button>
+          </Children>
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-panel" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </Panel>
+        <Panel>
           <Name value="infoMovies" />
           <Orientation value="Vertical" />
           <Panel.Height value="#" />
@@ -19,7 +48,7 @@
             <Label>
               <Name value="label1" />
               <Heading value="h2" />
-              <Margin value="6, 6, 26, 6 px" />
+              <Margin value="26, 6, 26, 6 px" />
               <Panel.Height value="#" />
               <Panel.Width value="300px" />
               <Bindings>
@@ -718,7 +747,19 @@ else
 	/*form.starring.fromJson(movieData.extractJson("starring"))
 	form.genres.fromJson(movieData.extractJson("genres"))
 	form.seasons1.fromJson(movieData.extractJson("seasons"))*/
-endif]]></Script>
+endif
+
+system.console(movieData.getJsonString())]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="handler_bntBack_OnClick" />
+      <IsPrivate value="True" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[navigation.main.mainList.go()]]></Script>
       </ActionLangBody>
       <DataContext>
         <ActionDataContext />

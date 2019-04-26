@@ -16,7 +16,6 @@
     <Attribute>
       <Name value="seenItWhole" />
       <Caption value="Seen it whole" />
-      <IsRequired value="True" />
       <DeclaredType>
         <AttributeType>
           <BaseType value="Bool" />
