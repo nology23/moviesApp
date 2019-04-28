@@ -1,0 +1,123 @@
+.sffw-list-paging {
+    margin-top: 1em;
+}
+.sffw-list-paging-button {
+    margin: 0 0.25em;
+
+    font-family: "Segoe UI Light", "Open Sans", "Helvetica Neue Light", "HelveticaNeue-Light", sans-serif;
+    outline: medium none;
+    background-color: #5f7599;
+    color: white;
+    border: 0px solid transparent;
+    -webkit-border-radius: 0px;
+            border-radius: 0px;
+    padding: 4px 12px;
+    vertical-align: middle;
+    text-align: center;
+}
+.sffw-list-paging-button:active {
+    background-color: #1d1d1d;
+}
+.sffw-list-paging-button:disabled {
+    background-color: #F2F2F2;
+    color: black;
+}
+.sffw-list-paging-button:disabled:active {
+    background-color: #F2F2F2;
+}
+.sffw-list-paging-pageinput, .sffw-list-paging-pagemax {
+    margin: 0 1em;
+    width: 4em;
+}
+.sffw-list-paging-pageinput {
+    text-align: right;
+    width: 4em;
+    vertical-align: middle;
+}
+.sffw-list-paging-spin {
+    width: 2em;
+    text-align: center;
+    display: inline-block;
+}
+.sffw-list-ordering-glyph {
+    width: 1em;
+    display: inline-block;
+    margin: 0 0.25em;
+}
+.sffw-list table {
+    border-collapse: collapse;
+    width: 100%;
+}
+.sffw-list td {
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    padding-left: 0.25em;
+    padding-right: 0.25em;
+}
+.sffw-list th {
+    cursor: pointer;
+    text-align: left;
+    padding-left: 0.25em;
+    padding-right: 0.25em;
+    padding-bottom: 0.5em;
+}
+.sffw-list tbody tr {
+    cursor: pointer;
+}
+.sffw-list tbody tr:nth-child(even) {
+    background-color: #EEE;
+}
+.sffw-list tbody tr:hover {
+	background-color: lightyellow;
+}
+.sffw-list tbody tr.sffw-list-selected-row {
+    background-color: gold;
+}
+.sffw-list .noselect {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.sffw-list-filter {
+    width: 100%;
+    border: 1px solid silver;
+    padding: 0.25em;
+    height: 100%;
+}
+.sffw-list-filter-active {
+    background-color: gold;
+}
+.sffw-list-error, .sffw-list-paging-spin-error {
+    color: red;
+}
+
+.sffw-list-dd {
+    border: 1px silver solid;
+    margin-top: 24px;
+    z-index: 1010;
+    position: absolute;
+    background-color: white;
+    overflow: auto;
+}
+
+.sffw-list-dd-filter {
+    width: 100%;
+    float: left;
+}
+.sffw-list-dd-filter-empty {
+    background-color: white;
+}
+
+.dd-check-input{
+    height: 12px;
+    width: 12px;
+    margin-top: 2px;
+    display: inline-block;
+}
+
+.enum-th{
+    width: 16em;
+}

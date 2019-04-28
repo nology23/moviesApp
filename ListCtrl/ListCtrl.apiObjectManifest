@@ -1,0 +1,336 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<ApiObjectManifest>
+  <Name value="ListCtrl" />
+  <Generator value="listCtrl.js" />
+  <Contracts>
+    <ImplementsContractManifest>
+      <Name value="IListCtrl" />
+    </ImplementsContractManifest>
+  </Contracts>
+  <Methods>
+    <MethodManifest>
+      <Name value="setSorting" />
+      <Description value="Sets sorting column (and sort order)" />
+      <ReturnType />
+      <Parameters>
+        <ParameterManifest>
+          <BaseType value="String" />
+          <Name value="columnAndOrder" />
+          <UiDescription value="Column name to order by (to specify sort order set parameter value to column:[asc|desc], asc is default" />
+        </ParameterManifest>
+      </Parameters>
+    </MethodManifest>
+    <MethodManifest>
+      <Name value="clearSorting" />
+      <Description value="Clears sorting settings" />
+      <ReturnType />
+    </MethodManifest>
+    <MethodManifest>
+      <Name value="getSorting" />
+      <Description value="Gets current sorting" />
+      <ReturnType>
+        <BaseType value="String" />
+      </ReturnType>
+    </MethodManifest>
+    <MethodManifest>
+      <Name value="clearVisibleFilters" />
+      <Description value="Clears all visible filters" />
+      <ReturnType />
+    </MethodManifest>
+    <MethodManifest>
+      <Name value="setTextFilter" />
+      <Description value="Sets/changes text column filter value" />
+      <ReturnType />
+      <Parameters>
+        <ParameterManifest>
+          <BaseType value="String" />
+          <Name value="column" />
+          <UiDescription value="Column name" />
+        </ParameterManifest>
+        <ParameterManifest>
+          <BaseType value="String" />
+          <Name value="filterText" />
+          <UiDescription value="Value to set" />
+        </ParameterManifest>
+      </Parameters>
+    </MethodManifest>
+    <MethodManifest>
+      <Name value="getTextFilter" />
+      <Description value="Gets text column filter value" />
+      <ReturnType>
+        <BaseType value="String" />
+      </ReturnType>
+      <Parameters>
+        <ParameterManifest>
+          <BaseType value="String" />
+          <Name value="column" />
+          <UiDescription value="Column name" />
+        </ParameterManifest>
+      </Parameters>
+    </MethodManifest>
+    <MethodManifest>
+      <Name value="setBooleanFilter" />
+      <Description value="Sets/changes boolean column filter value" />
+      <ReturnType />
+      <Parameters>
+        <ParameterManifest>
+          <BaseType value="String" />
+          <Name value="column" />
+          <UiDescription value="Column name" />
+        </ParameterManifest>
+        <ParameterManifest>
+          <BaseType value="Bool" />
+          <Name value="value" />
+          <UiDescription value="Value to set" />
+        </ParameterManifest>
+      </Parameters>
+    </MethodManifest>
+    <MethodManifest>
+      <Name value="getBooleanFilter" />
+      <Description value="Gets boolean column filter value" />
+      <ReturnType>
+        <BaseType value="Bool" />
+      </ReturnType>
+      <Parameters>
+        <ParameterManifest>
+          <BaseType value="String" />
+          <Name value="column" />
+          <UiDescription value="Column name" />
+        </ParameterManifest>
+      </Parameters>
+    </MethodManifest>
+    <MethodManifest>
+      <Name value="setDateRangeFilter" />
+      <Description value="Sets/changes date column filter value" />
+      <ReturnType />
+      <Parameters>
+        <ParameterManifest>
+          <BaseType value="String" />
+          <Name value="column" />
+          <UiDescription value="Column name" />
+        </ParameterManifest>
+        <ParameterManifest>
+          <BaseType value="Date" />
+          <Name value="startDate" />
+          <UiDescription value="Start date" />
+        </ParameterManifest>
+        <ParameterManifest>
+          <BaseType value="Date" />
+          <Name value="endDate" />
+          <UiDescription value="End date" />
+        </ParameterManifest>
+      </Parameters>
+    </MethodManifest>
+    <MethodManifest>
+      <Name value="getDateFilterStart" />
+      <ReturnType>
+        <BaseType value="Date" />
+      </ReturnType>
+      <Parameters>
+        <ParameterManifest>
+          <BaseType value="String" />
+          <Name value="column" />
+          <UiDescription value="Column name" />
+        </ParameterManifest>
+      </Parameters>
+    </MethodManifest>
+    <MethodManifest>
+      <Name value="getDateFilterEnd" />
+      <ReturnType>
+        <BaseType value="Date" />
+      </ReturnType>
+      <Parameters>
+        <ParameterManifest>
+          <BaseType value="String" />
+          <Name value="column" />
+          <UiDescription value="Column name" />
+        </ParameterManifest>
+      </Parameters>
+    </MethodManifest>
+    <MethodManifest>
+      <Name value="setReady" />
+      <Description value="Sets controller as ready for List" />
+      <ReturnType />
+      <Parameters>
+        <ParameterManifest>
+          <BaseType value="Bool" />
+          <Name value="isReady" />
+        </ParameterManifest>
+      </Parameters>
+    </MethodManifest>
+    <MethodManifest>
+      <Name value="setInvisibleODataFilter" />
+      <Description value="Sets OData filter expression" />
+      <ReturnType />
+      <Parameters>
+        <ParameterManifest>
+          <BaseType value="String" />
+          <Name value="filter" />
+          <UiDescription value="OData filter expression" />
+        </ParameterManifest>
+      </Parameters>
+    </MethodManifest>
+    <MethodManifest>
+      <Name value="getInvisibleODataFilter" />
+      <Description value="Gets OData filter expression" />
+      <ReturnType>
+        <BaseType value="String" />
+      </ReturnType>
+    </MethodManifest>
+    <MethodManifest>
+      <Name value="setActivePage" />
+      <Description value="Sets active page" />
+      <ReturnType />
+      <Parameters>
+        <ParameterManifest>
+          <BaseType value="Integer" />
+          <Name value="pageNumber" />
+          <UiDescription value="Page number" />
+        </ParameterManifest>
+      </Parameters>
+    </MethodManifest>
+    <MethodManifest>
+      <Name value="getActivePage" />
+      <Description value="Gets active page" />
+      <ReturnType>
+        <BaseType value="Integer" />
+      </ReturnType>
+    </MethodManifest>
+    <MethodManifest>
+      <Name value="setPageSize" />
+      <Description value="Sets page size" />
+      <ReturnType />
+      <Parameters>
+        <ParameterManifest>
+          <BaseType value="Integer" />
+          <Name value="pageSize" />
+          <UiDescription value="Page size" />
+        </ParameterManifest>
+      </Parameters>
+    </MethodManifest>
+    <MethodManifest>
+      <Name value="getPageSize" />
+      <Description value="Gets page size" />
+      <ReturnType>
+        <BaseType value="Integer" />
+      </ReturnType>
+    </MethodManifest>
+    <MethodManifest>
+      <Name value="getRowCount" />
+      <Description value="Gets row count" />
+      <ReturnType>
+        <BaseType value="Integer" />
+      </ReturnType>
+    </MethodManifest>
+    <MethodManifest>
+      <Name value="focusFirstRecord" />
+      <ReturnType />
+    </MethodManifest>
+    <MethodManifest>
+      <Name value="saveState" />
+      <Description value="Returns JSON string with object state" />
+      <ReturnType>
+        <BaseType value="String" />
+      </ReturnType>
+      <Parameters>
+        <ParameterManifest>
+          <BaseType value="String" />
+          <Name value="options" />
+          <UiDescription value="Comma separated options (sorting, visibleFilter, invisibleFilter, paging) or null" />
+        </ParameterManifest>
+      </Parameters>
+    </MethodManifest>
+    <MethodManifest>
+      <Name value="loadState" />
+      <Description value="Loads object state from JSON string" />
+      <ReturnType />
+      <Parameters>
+        <ParameterManifest>
+          <BaseType value="String" />
+          <Name value="json" />
+        </ParameterManifest>
+      </Parameters>
+    </MethodManifest>
+    <MethodManifest>
+      <Name value="clearState" />
+      <ReturnType />
+    </MethodManifest>
+    <MethodManifest>
+      <Name value="setVisibleColumns" />
+      <Description value="Sets visible columns and their order" />
+      <ReturnType />
+      <Parameters>
+        <ParameterManifest>
+          <BaseType value="String" />
+          <Name value="json" />
+          <UiDescription value="json containing array of column names in required order" />
+        </ParameterManifest>
+      </Parameters>
+    </MethodManifest>
+    <MethodManifest>
+      <Name value="getVisibleColumns" />
+      <Description value="Returns JSON string with ordered column names" />
+      <ReturnType>
+        <BaseType value="String" />
+      </ReturnType>
+    </MethodManifest>
+    <MethodManifest>
+      <Name value="setColumnVisibility" />
+      <Description value="Sets column visibility and eventually order" />
+      <ReturnType />
+      <Parameters>
+        <ParameterManifest>
+          <BaseType value="String" />
+          <Name value="columnName" />
+        </ParameterManifest>
+        <ParameterManifest>
+          <BaseType value="Bool" />
+          <Name value="isVisible" />
+        </ParameterManifest>
+        <ParameterManifest>
+          <BaseType value="Integer" />
+          <Name value="order" />
+          <UiDescription value="order in visible columns array (starting with 1)" />
+        </ParameterManifest>
+      </Parameters>
+    </MethodManifest>
+    <MethodManifest>
+      <Name value="getColumnVisibility" />
+      <Description value="Returns true if column is visible, otherwise false" />
+      <ReturnType>
+        <BaseType value="Bool" />
+      </ReturnType>
+      <Parameters>
+        <ParameterManifest>
+          <BaseType value="String" />
+          <Name value="columnName" />
+        </ParameterManifest>
+      </Parameters>
+    </MethodManifest>
+    <MethodManifest>
+      <Name value="resetColumns" />
+      <Description value="Resets column visibility and order to design-time settings" />
+      <ReturnType />
+    </MethodManifest>
+  </Methods>
+  <Properties>
+    <PropertyManifest>
+      <Name value="server" />
+      <Type value="ApiObject" />
+      <UiCategory value="Common" />
+      <UiEditor value="contract/IServerConnection" />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="dataProvider" />
+      <Type value="ApiObject" />
+      <UiCategory value="Common" />
+      <UiDescription value="Custom list data provider" />
+      <UiEditor value="contract/IListCtrlDataProvider" />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="OnDataRowsChanged" />
+      <Type value="ScreenFactory.Data.Model.Actions.ActionEvent" />
+    </PropertyManifest>
+  </Properties>
+</ApiObjectManifest>

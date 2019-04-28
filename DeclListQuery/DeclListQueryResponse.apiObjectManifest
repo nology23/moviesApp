@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<ApiObjectManifest>
+  <Name value="DeclListQueryResponse" />
+  <CanBeFormLocal value="False" />
+  <CanBeGlobal value="False" />
+  <Generator value="*" />
+  <Methods>
+    <MethodManifest>
+      <Name value="isError" />
+      <ReturnType>
+        <BaseType value="Bool" />
+      </ReturnType>
+    </MethodManifest>
+    <MethodManifest>
+      <Name value="getErrorMessage" />
+      <ReturnType>
+        <BaseType value="String" />
+      </ReturnType>
+    </MethodManifest>
+    <MethodManifest>
+      <Name value="getStringValue" />
+      <ReturnType>
+        <BaseType value="String" />
+      </ReturnType>
+      <Parameters>
+        <ParameterManifest>
+          <BaseType value="String" />
+          <Name value="columnName" />
+        </ParameterManifest>
+      </Parameters>
+    </MethodManifest>
+    <MethodManifest>
+      <Name value="getIntValue" />
+      <ReturnType>
+        <BaseType value="Integer" />
+      </ReturnType>
+      <Parameters>
+        <ParameterManifest>
+          <BaseType value="String" />
+          <Name value="columnName" />
+        </ParameterManifest>
+      </Parameters>
+    </MethodManifest>
+    <MethodManifest>
+      <Name value="getDateValue" />
+      <ReturnType>
+        <BaseType value="Date" />
+      </ReturnType>
+      <Parameters>
+        <ParameterManifest>
+          <BaseType value="String" />
+          <Name value="columnName" />
+        </ParameterManifest>
+      </Parameters>
+    </MethodManifest>
+    <MethodManifest>
+      <Name value="getDateTimeValue" />
+      <ReturnType>
+        <BaseType value="DateTime" />
+      </ReturnType>
+      <Parameters>
+        <ParameterManifest>
+          <BaseType value="String" />
+          <Name value="columnName" />
+        </ParameterManifest>
+      </Parameters>
+    </MethodManifest>
+  </Methods>
+</ApiObjectManifest>

@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<ComponentManifest>
+  <Name value="List" />
+  <Generator value="listGenerator.js" />
+  <Type value="Control" />
+  <Events>
+    <EventManifest>
+      <Name value="OnSelectionChange" />
+      <Parameters>
+        <EventParameterManifest>
+          <Name value="data" />
+        </EventParameterManifest>
+      </Parameters>
+    </EventManifest>
+    <EventManifest>
+      <Name value="OnRowsChanged" />
+      <UiDescription value="Fired when rows were passed from controller to component and selected row was projected to referenced selectedRow structure." />
+      <Parameters>
+        <EventParameterManifest>
+          <Name value="data" />
+        </EventParameterManifest>
+      </Parameters>
+    </EventManifest>
+    <EventManifest>
+      <Name value="OnRowClicked" />
+      <Parameters>
+        <EventParameterManifest>
+          <Name value="columnName" />
+          <BaseType value="String" />
+          <ParamType value="BaseType" />
+        </EventParameterManifest>
+      </Parameters>
+    </EventManifest>
+  </Events>
+  <Properties>
+    <PropertyManifest>
+      <Name value="listName" />
+      <UiCategory value="Common" />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="selectedRow" />
+      <Bindable value="True" />
+      <Type value="ScreenFactory.Data.Model.DataStructures.DataReferenceAttribute" />
+      <UiCategory value="Common" />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="columns" />
+      <Type value="collection-listColumn" />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="controller" />
+      <IsRequired value="True" />
+      <Type value="ApiObject" />
+      <UiCategory value="Common" />
+      <UiEditor value="contract/IListCtrl" />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="maxVisibleFilterOptions" />
+      <Type value="integer" />
+      <UiCaption value="Maximum of visible filter options" />
+      <UiDescription value="Maximum of visible filter options without scrolling" />
+    </PropertyManifest>
+  </Properties>
+</ComponentManifest>

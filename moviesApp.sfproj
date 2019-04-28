@@ -50,5 +50,25 @@
       <ReferencedIdentity value="referenceLookup.10b2d4db46e641b5bba23b33e3568c2e" />
       <ReferencedVersion value="2.4.0" />
     </PackageReference>
+    <PackageReference Alias="Page" IsComponentLib="True" Origin="Page\Page.package">
+      <ReferencedIdentity value="Page.f7aa0c151c64407daef13910dcf7b72a" />
+      <ReferencedVersion value="1.6.1" />
+    </PackageReference>
+    <PackageReference Alias="List" IsComponentLib="True" Origin="List\List.package">
+      <ReferencedIdentity value="List.a6f439c3b8e944f383863f66ff1261c8" />
+      <ReferencedVersion value="4.2.1" />
+    </PackageReference>
+    <PackageReference Alias="ListCtrl" IsComponentLib="True" Origin="ListCtrl\ListCtrl.package">
+      <ReferencedIdentity value="ListCtrl.459ff3780ab145df985191cfc1336ce1" />
+      <ReferencedVersion value="2.10.0" />
+    </PackageReference>
+    <PackageReference Alias="ListColumnSelector" IsComponentLib="True" Origin="ListColumnSelector\ListColumnSelector.package">
+      <ReferencedIdentity value="ListColumnSelector.2cbd6bf4e5dc483c88201c7083328f69" />
+      <ReferencedVersion value="1.0.1" />
+    </PackageReference>
+    <PackageReference Alias="DeclListQuery" IsComponentLib="True" Origin="DeclListQuery\DeclListQuery.package">
+      <ReferencedIdentity value="DeclListQuery.f41d2c211a8f43618588763e63b56065" />
+      <ReferencedVersion value="1.0.2" />
+    </PackageReference>
   </PackageReferences>
 </ProjectRoot>

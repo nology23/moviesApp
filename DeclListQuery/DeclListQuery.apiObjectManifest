@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<ApiObjectManifest>
+  <Name value="DeclListQuery" />
+  <Generator value="declListQuery.js" />
+  <Methods>
+    <MethodManifest>
+      <Name value="getResultAsync" />
+      <Description value="Makes query and fills given collection" />
+      <ReturnType>
+        <ObjectType reference="+Components.DeclListQueryResponse" />
+      </ReturnType>
+      <Parameters>
+        <ParameterManifest>
+          <BaseType value="String" />
+          <Name value="columnNames" />
+          <UiDescription value="Column names" />
+        </ParameterManifest>
+        <ParameterManifest>
+          <BaseType value="String" />
+          <Name value="filter" />
+          <UiDescription value="OData filter expression" />
+        </ParameterManifest>
+      </Parameters>
+    </MethodManifest>
+    <MethodManifest>
+      <Name value="getCountAsync" />
+      <ReturnType>
+        <BaseType value="Integer" />
+      </ReturnType>
+      <Parameters>
+        <ParameterManifest>
+          <BaseType value="String" />
+          <Name value="filter" />
+          <UiDescription value="OData filter expression" />
+        </ParameterManifest>
+        <ParameterManifest>
+          <BaseType value="String" />
+          <Name value="acceptHeaderValue" />
+          <UiDescription value="Value of Accept HTTP header - suitable value depends on server implementation; use application/json;odata=verbose,text/plain or application/json;odata=light" />
+        </ParameterManifest>
+      </Parameters>
+    </MethodManifest>
+  </Methods>
+  <Properties>
+    <PropertyManifest>
+      <Name value="server" />
+      <Type value="ApiObject" />
+      <UiCategory value="Common" />
+      <UiEditor value="contract/IServerConnection" />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="listName" />
+      <IsRequired value="True" />
+      <Type value="string" />
+      <UiCategory value="Common" />
+      <UiDescription value="List name" />
+    </PropertyManifest>
+  </Properties>
+</ApiObjectManifest>

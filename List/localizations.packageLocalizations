@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<PackageLocalizations>
+  <Name value="localizations" />
+  <Strings>
+    <LocalizedString LocID="fromPlaceholderLocalization">
+      <Values>
+        <LocaleValue Lang="en" Value="From" />
+        <LocaleValue Lang="cs" Value="Od" />
+        <LocaleValue Lang="fi" Value="Alkaen" />
+        <LocaleValue Lang="sv" Value="Från" />
+        <LocaleValue Lang="sr" Value="Iz" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="toPlaceholderLocalization">
+      <Values>
+        <LocaleValue Lang="en" Value="To" />
+        <LocaleValue Lang="cs" Value="Do" />
+        <LocaleValue Lang="fi" Value="Jotta" />
+        <LocaleValue Lang="sv" Value="Till" />
+        <LocaleValue Lang="sr" Value="Da" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="page">
+      <Values>
+        <LocaleValue Lang="en" Value="Page" />
+        <LocaleValue Lang="cs" Value="Stránka" />
+        <LocaleValue Lang="fi" />
+        <LocaleValue Lang="sv" />
+        <LocaleValue Lang="sr" Value="Stranica" />
+      </Values>
+    </LocalizedString>
+  </Strings>
+</PackageLocalizations>

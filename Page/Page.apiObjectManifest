@@ -1,0 +1,155 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<ApiObjectManifest>
+  <Name value="Page" />
+  <Generator value="page.js" />
+  <Methods>
+    <MethodManifest>
+      <Name value="setLang" />
+      <ReturnType />
+      <Parameters>
+        <ParameterManifest>
+          <BaseType value="String" />
+          <Name value="lang" />
+        </ParameterManifest>
+      </Parameters>
+    </MethodManifest>
+    <MethodManifest>
+      <Name value="setTitle" />
+      <ReturnType />
+      <Parameters>
+        <ParameterManifest>
+          <BaseType value="String" />
+          <Name value="title" />
+        </ParameterManifest>
+      </Parameters>
+    </MethodManifest>
+    <MethodManifest>
+      <Name value="confirm" />
+      <ReturnType>
+        <BaseType value="Bool" />
+      </ReturnType>
+      <Parameters>
+        <ParameterManifest>
+          <BaseType value="String" />
+          <Name value="message" />
+        </ParameterManifest>
+      </Parameters>
+    </MethodManifest>
+    <MethodManifest>
+      <Name value="scrollToTop" />
+      <ReturnType />
+    </MethodManifest>
+    <MethodManifest>
+      <Name value="getLang" />
+      <ReturnType>
+        <BaseType value="String" />
+      </ReturnType>
+    </MethodManifest>
+    <MethodManifest>
+      <Name value="navigateToUrl" />
+      <ReturnType />
+      <Parameters>
+        <ParameterManifest>
+          <BaseType value="String" />
+          <Name value="url" />
+        </ParameterManifest>
+        <ParameterManifest>
+          <BaseType value="Bool" />
+          <Name value="replace" />
+        </ParameterManifest>
+      </Parameters>
+    </MethodManifest>
+    <MethodManifest>
+      <Name value="getCurrentUrlProtocol" />
+      <Description value="Returns string like &quot;https:&quot;. Internally mapped to windows.location.protocol." />
+      <ReturnType>
+        <BaseType value="String" />
+      </ReturnType>
+    </MethodManifest>
+    <MethodManifest>
+      <Name value="getCurrentUrlOrigin" />
+      <Description value="Returns string like &quot;https://google.com&quot;. Internally mapped to window.location.origin." />
+      <ReturnType>
+        <BaseType value="String" />
+      </ReturnType>
+    </MethodManifest>
+    <MethodManifest>
+      <Name value="getCurrentUrlPathName" />
+      <Description value="Returns string like &quot;/id=42&quot;. Internally mapped to windows.location.pathname." />
+      <ReturnType>
+        <BaseType value="String" />
+      </ReturnType>
+    </MethodManifest>
+    <MethodManifest>
+      <Name value="getCurrentUrlHash" />
+      <Description value="Returns hash part of url. Internally mapped to windows.location.hash." />
+      <ReturnType>
+        <BaseType value="String" />
+      </ReturnType>
+    </MethodManifest>
+    <MethodManifest>
+      <Name value="print" />
+      <ReturnType />
+    </MethodManifest>
+    <MethodManifest>
+      <Name value="focusControl" />
+      <ReturnType />
+      <Parameters>
+        <ParameterManifest>
+          <BaseType value="String" />
+          <Name value="name" />
+          <UiDescription value="Component name, that is assigned in form designer." />
+        </ParameterManifest>
+        <ParameterManifest>
+          <BaseType value="String" />
+          <Name value="pointer" />
+          <UiDescription value="If the pointer contains collection with item index and you want to focus that collection item, pass the pointer as argument." />
+        </ParameterManifest>
+      </Parameters>
+    </MethodManifest>
+    <MethodManifest>
+      <Name value="scrollTo" />
+      <ReturnType />
+      <Parameters>
+        <ParameterManifest>
+          <BaseType value="String" />
+          <Name value="name" />
+          <UiDescription value="Component name, that is assigned in form designer." />
+        </ParameterManifest>
+        <ParameterManifest>
+          <BaseType value="String" />
+          <Name value="pointer" />
+          <UiDescription value="If the pointer contains collection with item index and you want to scroll to that collection item, pass the pointer as argument." />
+        </ParameterManifest>
+      </Parameters>
+    </MethodManifest>
+    <MethodManifest>
+      <Name value="scrollToWithOffset" />
+      <ReturnType />
+      <Parameters>
+        <ParameterManifest>
+          <BaseType value="String" />
+          <Name value="name" />
+          <UiDescription value="Component name, that is assigned in form designer." />
+        </ParameterManifest>
+        <ParameterManifest>
+          <BaseType value="String" />
+          <Name value="pointer" />
+          <UiDescription value="If the pointer contains collection with item index and you want to scroll to that collection item, pass the pointer as argument." />
+        </ParameterManifest>
+        <ParameterManifest>
+          <BaseType value="Integer" />
+          <Name value="offset" />
+          <UiDescription value="Offset in pixels, use when page contains something like fixed page header." />
+        </ParameterManifest>
+      </Parameters>
+    </MethodManifest>
+  </Methods>
+  <Properties>
+    <PropertyManifest>
+      <Name value="OnLangChanged" />
+      <Type value="ScreenFactory.Data.Model.Actions.ActionEvent" />
+    </PropertyManifest>
+  </Properties>
+</ApiObjectManifest>

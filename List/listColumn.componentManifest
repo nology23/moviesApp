@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<ComponentManifest>
+  <Name value="listColumn" />
+  <Generator value="&lt;listColumn&gt;" />
+  <Type value="Component" />
+  <Properties>
+    <PropertyManifest>
+      <Name value="ColumnName" />
+      <IsRequired value="True" />
+      <Type value="string" />
+      <UiCategory value="Common" />
+      <UiDescription value="Name of attribute to display in list" />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="Caption" />
+      <Bindable value="OneWay" />
+      <IsRequired value="True" />
+      <Type value="string" />
+      <UiCategory value="Common" />
+      <UiDescription value="Header caption" />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="DataType" />
+      <Type value="string" />
+      <UiCategory value="Common" />
+      <UiDescription value="Data type of displayed attribute" />
+      <UiEditor value="list/string|integer|decimal|boolean|date" />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="IsVisible" />
+      <Default value="true" />
+      <Type value="bool" />
+      <UiCategory value="Appearance" />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="ColumnWidth" />
+      <Type value="Length" />
+      <UiCategory value="Appearance" />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="EnableFilter" />
+      <Default value="true" />
+      <Type value="bool" />
+      <UiCategory value="Filtering" />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="filterOptions" />
+      <Type value="collection-filterOption" />
+      <UiCategory value="Filtering" />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="FilterOperatorType" />
+      <UiCategory value="Filtering" />
+      <UiDescription value="Search type (only string column)" />
+      <UiEditor value="list/startswith|eq|substring" />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="formatAsAmount" />
+      <Default value="false" />
+      <Type value="bool" />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="formatAsCurrency" />
+      <Default value="false" />
+      <Type value="bool" />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="filterOptionSource" />
+      <Type value="ApiObject" />
+      <UiCategory value="Filtering" />
+      <UiEditor value="contract/IReferenceList" />
+    </PropertyManifest>
+  </Properties>
+</ComponentManifest>

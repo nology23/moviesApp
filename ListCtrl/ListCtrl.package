@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<Package IsComponentLib="True">
+  <Identity value="ListCtrl.459ff3780ab145df985191cfc1336ce1" />
+  <Version value="2.10.0" />
+  <Items>
+    <PackageItem Src="ListCtrl.apiObjectManifest" />
+    <ResourceItem ResourceName="listCtrl.js" Action="None" OutputFileName="listCtrl.js" Src="listCtrl.js" />
+    <PackageItem Src="localizations.packageLocalizations" />
+  </Items>
+</Package>

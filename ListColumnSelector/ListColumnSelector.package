@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<Package IsComponentLib="True">
+  <Identity value="ListColumnSelector.2cbd6bf4e5dc483c88201c7083328f69" />
+  <Version value="1.0.1" />
+  <Items>
+    <ResourceItem ResourceName="listColumnSelector.js" LinkerAction="Script" OutputFileName="listColumnSelector.js" Src="listColumnSelector.js" />
+    <ResourceItem ResourceName="listColumnSelector.css" LinkerAction="Css" OutputFileName="listColumnSelector.css" Src="listColumnSelector.css" />
+    <PackageItem Src="localizations.packageLocalizations" />
+    <PackageItem Src="listColumnSelector.componentManifest" />
+  </Items>
+</Package>

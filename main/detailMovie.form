@@ -11,8 +11,8 @@
       <Panel.Width value="*" />
       <Children>
         <Panel>
-          <Name value="panel2" />
-          <Orientation value="Vertical" />
+          <Name value="buttons" />
+          <Orientation value="Horizontal" />
           <Panel.Height value="#" />
           <Panel.Width value="*" />
           <Children>
@@ -31,6 +31,36 @@
                 </CssClassConditional>
               </CssClass>
             </Button>
+            <Panel>
+              <Name value="panel8" />
+              <Orientation value="Vertical" />
+              <Panel.Height value="#" />
+              <Panel.Width value="*" />
+              <Children>
+                <Button>
+                  <Name value="btnEdit" />
+                  <Caption value="Edit" />
+                  <Panel.Height value="#" />
+                  <Panel.HorizontalAlignment value="Right" />
+                  <Panel.Width value="150px" />
+                  <OnClick>
+                    <ActionEvent ReferencedAction="~handler_btnEdit_OnClick" />
+                  </OnClick>
+                  <CssClass>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-button" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                  </CssClass>
+                </Button>
+              </Children>
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-panel" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </Panel>
           </Children>
           <CssClass>
             <CssClassConditional>
@@ -200,9 +230,9 @@
                       <Heading value="h1" />
                       <Panel.Height value="#" />
                       <Panel.HorizontalAlignment value="Center" />
-                      <Panel.Width value="20%" />
+                      <Panel.Width value="45%" />
                       <Bindings>
-                        <Binding SourceProperty="Data" Expression="movie.rating.score" />
+                        <Binding SourceProperty="Data" Expression="this.movie.rating._rating" />
                       </Bindings>
                       <CssClass>
                         <CssClassConditional>
@@ -461,7 +491,7 @@
                                                     <Binding SourceProperty="Data" Expression="rating.dateOfWatching" />
                                                     <Binding SourceProperty="IsRequiredMarkVisible" Expression="rating.dateOfWatching.isRequired()" />
                                                     <Binding SourceProperty="Caption" Expression="rating.dateOfWatching.caption()" />
-                                                    <Binding SourceProperty="IsVisible" Expression="this.rating.hasValue()" />
+                                                    <Binding SourceProperty="IsVisible" Expression="this.rating.dateOfWatching.hasValue()" />
                                                   </Bindings>
                                                   <CssClass>
                                                     <CssClassConditional>
@@ -536,9 +566,9 @@
                                                   <Margin value="0, 6, 0, 6 px" />
                                                   <Panel.Height value="#" />
                                                   <Panel.HorizontalAlignment value="Center" />
-                                                  <Panel.Width value="20%" />
+                                                  <Panel.Width value="35%" />
                                                   <Bindings>
-                                                    <Binding SourceProperty="Data" Expression="rating.score" />
+                                                    <Binding SourceProperty="Data" Expression="this.rating._ratingEp" />
                                                     <Binding SourceProperty="IsVisible" Expression="this.rating.score.hasValue()" />
                                                   </Bindings>
                                                   <CssClass>
@@ -676,6 +706,16 @@
                 <Include>
                   <Include reference="+DataEntities.ratingMovies" />
                 </Include>
+                <Computed>
+                  <Name value="_rating" />
+                  <Caption value="_ rating" />
+                  <Expression IsValid="True">
+                    <ExpressionText><![CDATA[tostring(this.score) + "/10"]]></ExpressionText>
+                    <ResultType>
+                      <BaseType value="String" />
+                    </ResultType>
+                  </Expression>
+                </Computed>
               </Children>
             </Complex>
             <Collection>
@@ -721,6 +761,16 @@
                         <Include>
                           <Include reference="+DataEntities.ratingSeries" />
                         </Include>
+                        <Computed>
+                          <Name value="_ratingEp" />
+                          <Caption value="_ rating ep" />
+                          <Expression IsValid="True">
+                            <ExpressionText><![CDATA[tostring(this.score) + "/10"]]></ExpressionText>
+                            <ResultType>
+                              <BaseType value="String" />
+                            </ResultType>
+                          </Expression>
+                        </Computed>
                       </Children>
                     </Complex>
                   </Children>
@@ -739,7 +789,7 @@
     <ActionBlock>
       <Name value="init" />
       <ActionLangBody IsValid="True">
-        <Script><![CDATA[var movieData = apiobjects.serverConnection1.getAsync("record?id=" + form.id)
+        <Script><![CDATA[var movieData = apiobjects.serverConnection.getAsync("record?id=" + form.id)
 if movieData.isError() then
 	system.consoleError(movieData.getErrorMessage())
 else
@@ -760,6 +810,16 @@ system.console(movieData.getJsonString())]]></Script>
       <IsPrivate value="True" />
       <ActionLangBody IsValid="True">
         <Script><![CDATA[navigation.main.mainList.go()]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="handler_btnEdit_OnClick" />
+      <IsPrivate value="True" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[navigation.main.editMovie.go(params.data.id)]]></Script>
       </ActionLangBody>
       <DataContext>
         <ActionDataContext />

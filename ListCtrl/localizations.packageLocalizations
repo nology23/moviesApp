@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<PackageLocalizations>
+  <Name value="localizations" />
+  <Strings>
+    <LocalizedString LocID="loadingDataError">
+      <Values>
+        <LocaleValue Lang="en" Value="Loading data error" />
+        <LocaleValue Lang="cs" Value="Chyba načítání dat" />
+        <LocaleValue Lang="fi" Value="Tietovirheen lataaminen" />
+        <LocaleValue Lang="sv" Value="Laddar datafel" />
+        <LocaleValue Lang="sr" Value="Učitavanje greške podataka" />
+      </Values>
+    </LocalizedString>
+  </Strings>
+</PackageLocalizations>

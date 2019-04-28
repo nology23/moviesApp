@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<Package IsComponentLib="True">
+  <Identity value="List.a6f439c3b8e944f383863f66ff1261c8" />
+  <Version value="4.2.1" />
+  <Items>
+    <PackageItem Src="filterOption.componentManifest" />
+    <PackageItem Src="listColumn.componentManifest" />
+    <PackageItem Src="List.componentManifest" />
+    <ResourceItem ResourceName="listGenerator.js" Action="None" OutputFileName="listGenerator.js" Src="listGenerator.js" />
+    <ResourceItem ResourceName="list.js" LinkerAction="Script" OutputFileName="list.js" Src="list.js" />
+    <ResourceItem ResourceName="list.css" LinkerAction="Css" OutputFileName="list.css" Src="list.css" />
+    <PackageItem Src="localizations.packageLocalizations" />
+  </Items>
+</Package>

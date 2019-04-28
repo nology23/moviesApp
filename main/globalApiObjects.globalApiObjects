@@ -4,10 +4,13 @@
   <Name value="globalApiObjects" />
   <ApiObjects>
     <ServerConnection identity="ServerConnection.db7b3eef075548988df768923691922c">
-      <Name value="serverConnection1" />
+      <Name value="serverConnection" />
       <codelistsUrl value="" />
       <listsUrl value="" />
       <rootUrl value="http://localhost:8080/" />
     </ServerConnection>
+    <Page identity="Page.f7aa0c151c64407daef13910dcf7b72a">
+      <Name value="page" />
+    </Page>
   </ApiObjects>
 </GlobalApiObjects>

@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<ComponentManifest>
+  <Name value="filterOption" />
+  <Generator value="&lt;filterOption&gt;" />
+  <Type value="ScreenFactory.Data.Model.UiData.BindableMetaObject" />
+  <Properties>
+    <PropertyManifest>
+      <Name value="value" />
+      <IsRequired value="True" />
+      <Type value="string" />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="text" />
+      <Bindable value="OneWay" />
+      <IsRequired value="True" />
+      <Type value="string" />
+    </PropertyManifest>
+  </Properties>
+</ComponentManifest>

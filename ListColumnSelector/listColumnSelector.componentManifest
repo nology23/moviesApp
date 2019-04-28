@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<ComponentManifest>
+  <Name value="listColumnSelector" />
+  <Generator value="&lt;sffw-listcolumn-selector&gt;" />
+  <Type value="Control" />
+  <Properties>
+    <PropertyManifest>
+      <Name value="controller" />
+      <IsRequired value="True" />
+      <Type value="ApiObject" />
+      <UiEditor value="contract/IListCtrl" />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="isEnabled" />
+      <Bindable value="Always" />
+      <IsRequired value="True" />
+    </PropertyManifest>
+  </Properties>
+</ComponentManifest>

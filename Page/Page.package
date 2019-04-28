@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<Package IsComponentLib="True">
+  <Identity value="Page.f7aa0c151c64407daef13910dcf7b72a" />
+  <Version value="1.6.1" />
+  <Items>
+    <ResourceItem ResourceName="page.js" Action="None" OutputFileName="page.js" Src="page.js" />
+    <PackageItem Src="Page.apiObjectManifest" />
+  </Items>
+</Package>

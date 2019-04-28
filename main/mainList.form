@@ -61,6 +61,84 @@
                 </CssClassConditional>
               </CssClass>
             </Button>
+            <Panel>
+              <Name value="panel11" />
+              <Orientation value="Vertical" />
+              <Panel.Height value="#" />
+              <Panel.Width value="*" />
+              <Children>
+                <Button>
+                  <Name value="btnEditList" />
+                  <Caption value="Edit" />
+                  <Panel.Height value="#" />
+                  <Panel.HorizontalAlignment value="Right" />
+                  <Panel.Width value="150px" />
+                  <OnClick>
+                    <ActionEvent ReferencedAction="~handler_btnEditList_OnClick" />
+                  </OnClick>
+                  <Bindings>
+                    <Binding SourceProperty="IsVisible" Expression="form.editVisible" />
+                  </Bindings>
+                  <CssClass>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-button" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                  </CssClass>
+                </Button>
+              </Children>
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-panel" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </Panel>
+            <Panel>
+              <Name value="panel91" />
+              <Orientation value="Vertical" />
+              <Panel.Height value="#" />
+              <Panel.Width value="*" />
+              <Children>
+                <Button>
+                  <Name value="btnCloseEdit" />
+                  <Caption value="Close edit" />
+                  <Panel.Height value="#" />
+                  <Panel.HorizontalAlignment value="Right" />
+                  <Panel.Width value="150px" />
+                  <OnClick>
+                    <ActionEvent ReferencedAction="~handler_btnCloseEdit_OnClick" />
+                  </OnClick>
+                  <Bindings>
+                    <Binding SourceProperty="IsVisible" Expression="form.deleteVisible" />
+                  </Bindings>
+                  <CssClass>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-button" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                  </CssClass>
+                </Button>
+              </Children>
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-panel" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </Panel>
+            <Panel>
+              <Name value="panel16" />
+              <Orientation value="Horizontal" />
+              <Panel.Height value="#" />
+              <Panel.Width value="25px" />
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-panel" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </Panel>
           </Children>
           <CssClass>
             <CssClassConditional>
@@ -80,7 +158,7 @@
           </Bindings>
           <Children>
             <Label>
-              <Name value="label1" />
+              <Name value="label11" />
               <Data value="Add Movie" />
               <Heading value="h2" />
               <Panel.Height value="#" />
@@ -105,11 +183,11 @@
                   <Panel.Width value="*" />
                   <Children>
                     <TextBox>
-                      <Name value="textBox4" />
+                      <Name value="textBox5" />
                       <CaptionVAlign value="Middle" />
                       <IsVisible value="False" />
                       <Panel.Height value="#" />
-                      <Panel.Width value="50%" />
+                      <Panel.Width value="300px" />
                       <Bindings>
                         <Binding SourceProperty="Data" Expression="complex.id" />
                         <Binding SourceProperty="IsRequiredMarkVisible" Expression="complex.id.isRequired()" />
@@ -126,7 +204,7 @@
                       <Name value="textBox11" />
                       <CaptionVAlign value="Middle" />
                       <Panel.Height value="#" />
-                      <Panel.Width value="50%" />
+                      <Panel.Width value="80%" />
                       <Bindings>
                         <Binding SourceProperty="Data" Expression="complex.name" />
                         <Binding SourceProperty="IsRequiredMarkVisible" Expression="complex.name.isRequired()" />
@@ -143,7 +221,7 @@
                       <Name value="textBox17" />
                       <CaptionVAlign value="Middle" />
                       <Panel.Height value="#" />
-                      <Panel.Width value="50%" />
+                      <Panel.Width value="80%" />
                       <Bindings>
                         <Binding SourceProperty="Data" Expression="complex.mainDirector" />
                         <Binding SourceProperty="IsRequiredMarkVisible" Expression="complex.mainDirector.isRequired()" />
@@ -229,7 +307,7 @@
                                       <Name value="textBox2" />
                                       <CaptionVAlign value="Middle" />
                                       <Panel.Height value="#" />
-                                      <Panel.Width value="50%" />
+                                      <Panel.Width value="80%" />
                                       <Bindings>
                                         <Binding SourceProperty="Data" Expression="actorName" />
                                         <Binding SourceProperty="IsRequiredMarkVisible" Expression="actorName.isRequired()" />
@@ -321,7 +399,7 @@
                                       <CaptionVAlign value="Middle" />
                                       <IsRequiredMarkVisible value="True" />
                                       <Panel.Height value="#" />
-                                      <Panel.Width value="50%" />
+                                      <Panel.Width value="80%" />
                                       <Bindings>
                                         <Binding SourceProperty="Data" Expression="genre" />
                                         <Binding SourceProperty="Caption" Expression="genre.caption()" />
@@ -381,7 +459,7 @@
                       <Name value="textBox18" />
                       <InputType value="Multiline" />
                       <Panel.Height value="#" />
-                      <Panel.Width value="50%" />
+                      <Panel.Width value="80%" />
                       <Rows value="10" />
                       <Bindings>
                         <Binding SourceProperty="Data" Expression="complex.description" />
@@ -396,7 +474,7 @@
                       </CssClass>
                     </TextBox>
                     <Panel>
-                      <Name value="panel11" />
+                      <Name value="ratingMovie" />
                       <Orientation value="Vertical" />
                       <Panel.Height value="#" />
                       <Panel.Width value="*" />
@@ -433,23 +511,51 @@
                             </CssClassConditional>
                           </CssClass>
                         </CheckBox>
-                        <TextBox>
-                          <Name value="textBox19" />
-                          <CaptionVAlign value="Middle" />
+                        <Panel>
+                          <Name value="panel17" />
+                          <Orientation value="Horizontal" />
                           <Panel.Height value="#" />
-                          <Panel.Width value="200px" />
-                          <Bindings>
-                            <Binding SourceProperty="Data" Expression="complex.rating.score" />
-                            <Binding SourceProperty="IsRequiredMarkVisible" Expression="complex.rating.score.isRequired()" />
-                            <Binding SourceProperty="Caption" Expression="complex.rating.score.caption()" />
-                          </Bindings>
+                          <Panel.Width value="*" />
+                          <Children>
+                            <TextBox>
+                              <Name value="textBox19" />
+                              <CaptionVAlign value="Middle" />
+                              <Margin value="6, 0, 6, 6 px" />
+                              <Panel.Height value="#" />
+                              <Panel.Width value="180px" />
+                              <Bindings>
+                                <Binding SourceProperty="Data" Expression="complex.rating.score" />
+                                <Binding SourceProperty="IsRequiredMarkVisible" Expression="complex.rating.score.isRequired()" />
+                                <Binding SourceProperty="Caption" Expression="complex.rating.score.caption()" />
+                              </Bindings>
+                              <CssClass>
+                                <CssClassConditional>
+                                  <ClassName value="{theme}-textbox" />
+                                  <IsThemedStyle value="True" />
+                                </CssClassConditional>
+                              </CssClass>
+                            </TextBox>
+                            <Label>
+                              <Name value="label2" />
+                              <Data value="/10" />
+                              <Margin value="6, 6, 6, 0 px" />
+                              <Panel.Height value="#" />
+                              <Panel.Width value="150px" />
+                              <CssClass>
+                                <CssClassConditional>
+                                  <ClassName value="{theme}-label" />
+                                  <IsThemedStyle value="True" />
+                                </CssClassConditional>
+                              </CssClass>
+                            </Label>
+                          </Children>
                           <CssClass>
                             <CssClassConditional>
-                              <ClassName value="{theme}-textbox" />
+                              <ClassName value="{theme}-panel" />
                               <IsThemedStyle value="True" />
                             </CssClassConditional>
                           </CssClass>
-                        </TextBox>
+                        </Panel>
                       </Children>
                       <CssClass>
                         <CssClassConditional>
@@ -475,6 +581,9 @@
                               <OnClick>
                                 <ActionEvent ReferencedAction="~handler_btnAddSeason_OnClick" />
                               </OnClick>
+                              <Bindings>
+                                <Binding SourceProperty="IsEnabled" Expression="form.complex.seasons.isValid()" />
+                              </Bindings>
                               <CssClass>
                                 <CssClassConditional>
                                   <ClassName value="{theme}-button" />
@@ -575,7 +684,7 @@
                                                       <Name value="textBox22" />
                                                       <CaptionVAlign value="Middle" />
                                                       <Panel.Height value="#" />
-                                                      <Panel.Width value="50%" />
+                                                      <Panel.Width value="80%" />
                                                       <Bindings>
                                                         <Binding SourceProperty="Data" Expression="episodeName" />
                                                         <Binding SourceProperty="Caption" Expression="episodeName.caption()" />
@@ -615,7 +724,7 @@
                                                           <Bindings>
                                                             <Binding SourceProperty="Caption" Expression="rating.seenItWhole.caption()" />
                                                             <Binding SourceProperty="IsRequiredMarkVisible" Expression="rating.seenItWhole" />
-                                                            <Binding SourceProperty="Data" Expression="" />
+                                                            <Binding SourceProperty="Data" Expression="rating.seenItWhole" />
                                                           </Bindings>
                                                           <CssClass>
                                                             <CssClassConditional>
@@ -624,22 +733,49 @@
                                                             </CssClassConditional>
                                                           </CssClass>
                                                         </CheckBox>
-                                                        <TextBox>
-                                                          <Name value="textBox3" />
+                                                        <Panel>
+                                                          <Name value="panel9" />
+                                                          <Orientation value="Horizontal" />
                                                           <Panel.Height value="#" />
-                                                          <Panel.Width value="200px" />
-                                                          <Bindings>
-                                                            <Binding SourceProperty="Data" Expression="rating.score" />
-                                                            <Binding SourceProperty="Caption" Expression="rating.score.caption()" />
-                                                            <Binding SourceProperty="IsRequiredMarkVisible" Expression="rating.score.isRequired()" />
-                                                          </Bindings>
+                                                          <Panel.Width value="*" />
+                                                          <Children>
+                                                            <TextBox>
+                                                              <Name value="textBox3" />
+                                                              <Margin value="6, 0, 6, 6 px" />
+                                                              <Panel.Height value="#" />
+                                                              <Panel.Width value="180px" />
+                                                              <Bindings>
+                                                                <Binding SourceProperty="Data" Expression="rating.score" />
+                                                                <Binding SourceProperty="Caption" Expression="rating.score.caption()" />
+                                                              </Bindings>
+                                                              <CssClass>
+                                                                <CssClassConditional>
+                                                                  <ClassName value="{theme}-textbox" />
+                                                                  <IsThemedStyle value="True" />
+                                                                </CssClassConditional>
+                                                              </CssClass>
+                                                            </TextBox>
+                                                            <Label>
+                                                              <Name value="label1" />
+                                                              <Data value="/10" />
+                                                              <Margin value="6, 6, 6, 0 px" />
+                                                              <Panel.Height value="#" />
+                                                              <Panel.Width value="150px" />
+                                                              <CssClass>
+                                                                <CssClassConditional>
+                                                                  <ClassName value="{theme}-label" />
+                                                                  <IsThemedStyle value="True" />
+                                                                </CssClassConditional>
+                                                              </CssClass>
+                                                            </Label>
+                                                          </Children>
                                                           <CssClass>
                                                             <CssClassConditional>
-                                                              <ClassName value="{theme}-textbox" />
+                                                              <ClassName value="{theme}-panel" />
                                                               <IsThemedStyle value="True" />
                                                             </CssClassConditional>
                                                           </CssClass>
-                                                        </TextBox>
+                                                        </Panel>
                                                       </Children>
                                                       <CssClass>
                                                         <CssClassConditional>
@@ -747,7 +883,7 @@
               <Panel.Height value="#" />
               <Panel.Width value="150px" />
               <OnClick>
-                <ActionEvent ReferencedAction="~saveBook" />
+                <ActionEvent ReferencedAction="~saveMovie" />
               </OnClick>
               <Bindings>
                 <Binding SourceProperty="IsEnabled" Expression="this.complex.isValid()" />
@@ -778,7 +914,7 @@
           </Bindings>
           <Children>
             <Label>
-              <Name value="label3" />
+              <Name value="label31" />
               <Data value="Search Movie" />
               <Heading value="h2" />
               <Panel.Height value="#" />
@@ -798,12 +934,12 @@
               <Children>
                 <TextBox>
                   <Name value="textBox12" />
+                  <Caption value="Movie" />
                   <CaptionVAlign value="Middle" />
                   <Panel.Height value="#" />
                   <Panel.Width value="50%" />
                   <Bindings>
                     <Binding SourceProperty="Data" Expression="filter.name" />
-                    <Binding SourceProperty="Caption" Expression="filter.name.caption()" />
                   </Bindings>
                   <CssClass>
                     <CssClassConditional>
@@ -820,12 +956,12 @@
                   <Children>
                     <TextBox>
                       <Name value="textBox16" />
+                      <Caption value="Actor" />
                       <CaptionVAlign value="Middle" />
                       <Panel.Height value="#" />
                       <Panel.Width value="50%" />
                       <Bindings>
-                        <Binding SourceProperty="Data" Expression="filter.filterStarring.actorName" />
-                        <Binding SourceProperty="Caption" Expression="filter.filterStarring.actorName.caption()" />
+                        <Binding SourceProperty="Data" Expression="filter.starring.actorName" />
                       </Bindings>
                       <CssClass>
                         <CssClassConditional>
@@ -842,29 +978,14 @@
                     </CssClassConditional>
                   </CssClass>
                 </Panel>
-                <TextBox>
-                  <Name value="textBox13" />
-                  <CaptionVAlign value="Middle" />
-                  <Panel.Height value="#" />
-                  <Panel.Width value="300px" />
-                  <Bindings>
-                    <Binding SourceProperty="Data" Expression="filter.yearOfRelease" />
-                    <Binding SourceProperty="Caption" Expression="filter.yearOfRelease.caption()" />
-                  </Bindings>
-                  <CssClass>
-                    <CssClassConditional>
-                      <ClassName value="{theme}-textbox" />
-                      <IsThemedStyle value="True" />
-                    </CssClassConditional>
-                  </CssClass>
-                </TextBox>
                 <EnumCombo>
                   <Name value="enumCombo2" />
                   <Panel.Height value="#" />
                   <Panel.Width value="300px" />
                   <Bindings>
-                    <Binding SourceProperty="Data" Expression="filter.filterType" />
-                    <Binding SourceProperty="Caption" Expression="filter.filterType.caption()" />
+                    <Binding SourceProperty="Data" Expression="filter.type" />
+                    <Binding SourceProperty="Caption" Expression="filter.type.caption()" />
+                    <Binding SourceProperty="IsEnabled" Expression="" />
                   </Bindings>
                   <CssClass>
                     <CssClassConditional>
@@ -900,21 +1021,253 @@
               <Panel.Height value="#" />
               <Panel.Width value="*" />
               <Content>
+                <Panel>
+                  <Name value="panel18" />
+                  <Orientation value="Horizontal" />
+                  <Children>
+                    <Repeater>
+                      <Name value="repeater1" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="*" />
+                      <Content>
+                        <Panel>
+                          <Name value="panel1" />
+                          <Orientation value="Vertical" />
+                          <Children>
+                            <Panel>
+                              <Name value="panel24" />
+                              <Orientation value="Horizontal" />
+                              <Panel.Height value="#" />
+                              <Panel.Width value="*" />
+                              <Children>
+                                <Label>
+                                  <Name value="label4" />
+                                  <Panel.Height value="#" />
+                                  <Panel.VerticalAlignment value="Middle" />
+                                  <Panel.Width value="50px" />
+                                  <Bindings>
+                                    <Binding SourceProperty="Data" Expression="yearOfRelease" />
+                                  </Bindings>
+                                  <CssClass>
+                                    <CssClassConditional>
+                                      <ClassName value="{theme}-label" />
+                                      <IsThemedStyle value="True" />
+                                    </CssClassConditional>
+                                  </CssClass>
+                                </Label>
+                                <Label>
+                                  <Name value="label32" />
+                                  <Heading value="h2" />
+                                  <Panel.Height value="#" />
+                                  <Panel.VerticalAlignment value="Middle" />
+                                  <Panel.Width value="80%" />
+                                  <Bindings>
+                                    <Binding SourceProperty="Data" Expression="name" />
+                                  </Bindings>
+                                  <CssClass>
+                                    <CssClassConditional>
+                                      <ClassName value="{theme}-label" />
+                                      <IsThemedStyle value="True" />
+                                    </CssClassConditional>
+                                  </CssClass>
+                                </Label>
+                                <Panel>
+                                  <Name value="panel2" />
+                                  <Orientation value="Vertical" />
+                                  <Panel.Height value="#" />
+                                  <Panel.VerticalAlignment value="Middle" />
+                                  <Panel.Width value="*" />
+                                  <Children>
+                                    <Panel>
+                                      <Name value="panel25" />
+                                      <Orientation value="Horizontal" />
+                                      <Panel.Height value="#" />
+                                      <Panel.Width value="*" />
+                                      <Children>
+                                        <Label>
+                                          <Name value="label12" />
+                                          <Panel.Height value="#" />
+                                          <Panel.VerticalAlignment value="Middle" />
+                                          <Panel.Width value="50px" />
+                                          <Bindings>
+                                            <Binding SourceProperty="Data" Expression="type" />
+                                          </Bindings>
+                                          <CssClass>
+                                            <CssClassConditional>
+                                              <ClassName value="{theme}-label" />
+                                              <IsThemedStyle value="True" />
+                                            </CssClassConditional>
+                                          </CssClass>
+                                        </Label>
+                                        <Panel>
+                                          <Name value="panel92" />
+                                          <Orientation value="Horizontal" />
+                                          <Panel.Height value="#" />
+                                          <Panel.Width value="*" />
+                                          <Children>
+                                            <Button>
+                                              <Name value="btnDetail" />
+                                              <Caption value="Detail" />
+                                              <Panel.Height value="#" />
+                                              <Panel.HorizontalAlignment value="Right" />
+                                              <Panel.VerticalAlignment value="Middle" />
+                                              <Panel.Width value="150px" />
+                                              <OnClick>
+                                                <ActionEvent ReferencedAction="~handler_btnDetail_OnClick" />
+                                              </OnClick>
+                                              <Bindings>
+                                                <Binding SourceProperty="IsVisible" Expression="form.editVisible" />
+                                              </Bindings>
+                                              <CssClass>
+                                                <CssClassConditional>
+                                                  <ClassName value="{theme}-button" />
+                                                  <IsThemedStyle value="True" />
+                                                </CssClassConditional>
+                                              </CssClass>
+                                            </Button>
+                                          </Children>
+                                          <CssClass>
+                                            <CssClassConditional>
+                                              <ClassName value="{theme}-panel" />
+                                              <IsThemedStyle value="True" />
+                                            </CssClassConditional>
+                                          </CssClass>
+                                        </Panel>
+                                        <Panel>
+                                          <Name value="panel15" />
+                                          <Orientation value="Horizontal" />
+                                          <Panel.Height value="#" />
+                                          <Panel.Width value="*" />
+                                          <Children>
+                                            <Button>
+                                              <Name value="btnEditDetail" />
+                                              <Caption value="Edit Detail" />
+                                              <Panel.Height value="#" />
+                                              <Panel.Width value="150px" />
+                                              <OnClick>
+                                                <ActionEvent ReferencedAction="~handler_btnEditDetail_OnClick" />
+                                              </OnClick>
+                                              <Bindings>
+                                                <Binding SourceProperty="IsVisible" Expression="form.deleteVisible" />
+                                              </Bindings>
+                                              <CssClass>
+                                                <CssClassConditional>
+                                                  <ClassName value="{theme}-button" />
+                                                  <IsThemedStyle value="True" />
+                                                </CssClassConditional>
+                                              </CssClass>
+                                            </Button>
+                                          </Children>
+                                          <CssClass>
+                                            <CssClassConditional>
+                                              <ClassName value="{theme}-panel" />
+                                              <IsThemedStyle value="True" />
+                                            </CssClassConditional>
+                                          </CssClass>
+                                        </Panel>
+                                        <Button>
+                                          <Name value="btnDelete" />
+                                          <Caption value="Delete" />
+                                          <Panel.Height value="#" />
+                                          <Panel.HorizontalAlignment value="Right" />
+                                          <Panel.VerticalAlignment value="Middle" />
+                                          <Panel.Width value="150px" />
+                                          <OnClick>
+                                            <ActionEvent ReferencedAction="~handler_btnDelete_OnClick" />
+                                          </OnClick>
+                                          <Bindings>
+                                            <Binding SourceProperty="IsVisible" Expression="form.deleteVisible" />
+                                          </Bindings>
+                                          <CssClass>
+                                            <CssClassConditional>
+                                              <ClassName value="{theme}-button" />
+                                              <IsThemedStyle value="True" />
+                                            </CssClassConditional>
+                                          </CssClass>
+                                        </Button>
+                                      </Children>
+                                      <CssClass>
+                                        <CssClassConditional>
+                                          <ClassName value="{theme}-panel" />
+                                          <IsThemedStyle value="True" />
+                                        </CssClassConditional>
+                                      </CssClass>
+                                    </Panel>
+                                  </Children>
+                                  <CssClass>
+                                    <CssClassConditional>
+                                      <ClassName value="{theme}-panel" />
+                                      <IsThemedStyle value="True" />
+                                    </CssClassConditional>
+                                  </CssClass>
+                                </Panel>
+                              </Children>
+                              <CssClass>
+                                <CssClassConditional>
+                                  <ClassName value="{theme}-panel" />
+                                  <IsThemedStyle value="True" />
+                                </CssClassConditional>
+                              </CssClass>
+                            </Panel>
+                          </Children>
+                          <CssClass>
+                            <CssClassConditional>
+                              <ClassName value="{theme}-panel" />
+                              <IsThemedStyle value="True" />
+                            </CssClassConditional>
+                          </CssClass>
+                        </Panel>
+                      </Content>
+                      <Bindings>
+                        <Binding SourceProperty="DataItems" Expression="movies" />
+                      </Bindings>
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-repeater" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </Repeater>
+                  </Children>
+                  <CssClass>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-panel" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                  </CssClass>
+                </Panel>
+              </Content>
+              <Bindings>
+                <Binding SourceProperty="Caption" Expression="movies.caption()" />
+                <Binding SourceProperty="IsVisible" Expression="form.moviesVisibility" />
+              </Bindings>
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-groupbox" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </GroupBox>
+            <GroupBox>
+              <Name value="groupBox1" />
+              <Panel.Height value="#" />
+              <Panel.Width value="*" />
+              <Content>
                 <Repeater>
-                  <Name value="repeater1" />
+                  <Name value="repeater6" />
                   <Content>
                     <Panel>
-                      <Name value="panel1" />
+                      <Name value="panel26" />
                       <Orientation value="Vertical" />
                       <Children>
                         <Panel>
-                          <Name value="panel24" />
+                          <Name value="panel27" />
                           <Orientation value="Horizontal" />
                           <Panel.Height value="#" />
                           <Panel.Width value="*" />
                           <Children>
                             <Label>
-                              <Name value="label4" />
+                              <Name value="yearOfRelease" />
                               <Panel.Height value="#" />
                               <Panel.VerticalAlignment value="Middle" />
                               <Panel.Width value="50px" />
@@ -929,11 +1282,11 @@
                               </CssClass>
                             </Label>
                             <Label>
-                              <Name value="label3" />
+                              <Name value="name" />
                               <Heading value="h2" />
                               <Panel.Height value="#" />
                               <Panel.VerticalAlignment value="Middle" />
-                              <Panel.Width value="*" />
+                              <Panel.Width value="80%" />
                               <Bindings>
                                 <Binding SourceProperty="Data" Expression="name" />
                               </Bindings>
@@ -945,20 +1298,19 @@
                               </CssClass>
                             </Label>
                             <Panel>
-                              <Name value="panel2" />
+                              <Name value="panel28" />
                               <Orientation value="Vertical" />
                               <Panel.Height value="#" />
-                              <Panel.VerticalAlignment value="Middle" />
-                              <Panel.Width value="350px" />
+                              <Panel.Width value="*" />
                               <Children>
                                 <Panel>
-                                  <Name value="panel25" />
+                                  <Name value="panel29" />
                                   <Orientation value="Horizontal" />
                                   <Panel.Height value="#" />
                                   <Panel.Width value="*" />
                                   <Children>
                                     <Label>
-                                      <Name value="label1" />
+                                      <Name value="type" />
                                       <Panel.Height value="#" />
                                       <Panel.VerticalAlignment value="Middle" />
                                       <Panel.Width value="50px" />
@@ -972,33 +1324,82 @@
                                         </CssClassConditional>
                                       </CssClass>
                                     </Label>
-                                    <Button>
-                                      <Name value="btnDetail" />
-                                      <Caption value="Detail" />
+                                    <Panel>
+                                      <Name value="panel30" />
+                                      <Orientation value="Horizontal" />
                                       <Panel.Height value="#" />
-                                      <Panel.HorizontalAlignment value="Right" />
-                                      <Panel.VerticalAlignment value="Middle" />
-                                      <Panel.Width value="150px" />
-                                      <OnClick>
-                                        <ActionEvent ReferencedAction="~handler_btnDetail_OnClick" />
-                                      </OnClick>
+                                      <Panel.Width value="*" />
+                                      <Children>
+                                        <Button>
+                                          <Name value="btnDetailSearch" />
+                                          <Caption value="Detail search" />
+                                          <Panel.Height value="#" />
+                                          <Panel.Width value="150px" />
+                                          <OnClick>
+                                            <ActionEvent ReferencedAction="~handler_btnDetailSearch_OnClick" />
+                                          </OnClick>
+                                          <Bindings>
+                                            <Binding SourceProperty="IsVisible" Expression="form.editVisible" />
+                                          </Bindings>
+                                          <CssClass>
+                                            <CssClassConditional>
+                                              <ClassName value="{theme}-button" />
+                                              <IsThemedStyle value="True" />
+                                            </CssClassConditional>
+                                          </CssClass>
+                                        </Button>
+                                      </Children>
                                       <CssClass>
                                         <CssClassConditional>
-                                          <ClassName value="{theme}-button" />
+                                          <ClassName value="{theme}-panel" />
                                           <IsThemedStyle value="True" />
                                         </CssClassConditional>
                                       </CssClass>
-                                    </Button>
+                                    </Panel>
+                                    <Panel>
+                                      <Name value="panel31" />
+                                      <Orientation value="Horizontal" />
+                                      <Panel.Height value="#" />
+                                      <Panel.Width value="*" />
+                                      <Children>
+                                        <Button>
+                                          <Name value="btnEditSearch" />
+                                          <Caption value="Edit search" />
+                                          <Panel.Height value="#" />
+                                          <Panel.Width value="150px" />
+                                          <OnClick>
+                                            <ActionEvent ReferencedAction="~handler_btnEditSearch_OnClick" />
+                                          </OnClick>
+                                          <Bindings>
+                                            <Binding SourceProperty="IsVisible" Expression="form.deleteVisible" />
+                                          </Bindings>
+                                          <CssClass>
+                                            <CssClassConditional>
+                                              <ClassName value="{theme}-button" />
+                                              <IsThemedStyle value="True" />
+                                            </CssClassConditional>
+                                          </CssClass>
+                                        </Button>
+                                      </Children>
+                                      <CssClass>
+                                        <CssClassConditional>
+                                          <ClassName value="{theme}-panel" />
+                                          <IsThemedStyle value="True" />
+                                        </CssClassConditional>
+                                      </CssClass>
+                                    </Panel>
                                     <Button>
-                                      <Name value="btnDelete" />
-                                      <Caption value="Delete" />
+                                      <Name value="btnDeleteSearch" />
+                                      <Caption value="Delete search" />
                                       <Panel.Height value="#" />
                                       <Panel.HorizontalAlignment value="Right" />
-                                      <Panel.VerticalAlignment value="Middle" />
                                       <Panel.Width value="150px" />
                                       <OnClick>
-                                        <ActionEvent ReferencedAction="~handler_btnDelete_OnClick" />
+                                        <ActionEvent ReferencedAction="~handler_btnDeleteSearch_OnClick" />
                                       </OnClick>
+                                      <Bindings>
+                                        <Binding SourceProperty="IsVisible" Expression="form.deleteVisible" />
+                                      </Bindings>
                                       <CssClass>
                                         <CssClassConditional>
                                           <ClassName value="{theme}-button" />
@@ -1040,7 +1441,7 @@
                     </Panel>
                   </Content>
                   <Bindings>
-                    <Binding SourceProperty="DataItems" Expression="movies" />
+                    <Binding SourceProperty="DataItems" Expression="movieSearch" />
                   </Bindings>
                   <CssClass>
                     <CssClassConditional>
@@ -1051,7 +1452,8 @@
                 </Repeater>
               </Content>
               <Bindings>
-                <Binding SourceProperty="Caption" Expression="movies.caption()" />
+                <Binding SourceProperty="Caption" Expression="movieSearch.caption()" />
+                <Binding SourceProperty="IsVisible" Expression="form.searchVisibility" />
               </Bindings>
               <CssClass>
                 <CssClassConditional>
@@ -1079,9 +1481,6 @@
   </Content>
   <DataContext>
     <DataContext>
-      <OnUserChange>
-        <ActionEvent ReferencedAction="+UiParts.mainList.handler_dataContext1_OnUserChange" />
-      </OnUserChange>
       <Children>
         <Attribute>
           <Name value="addMovie" />
@@ -1124,17 +1523,13 @@
             <Complex>
               <Name value="rating" />
               <Caption value="Rating" />
+              <IsRequired value="True" />
               <Children>
                 <Include>
                   <Include reference="+DataEntities.ratingMovies" />
                 </Include>
               </Children>
             </Complex>
-            <Attribute>
-              <Name value="genres1" />
-              <Caption value="Genres 1" />
-              <MetaType reference="+MetaTypes.genres" />
-            </Attribute>
             <Collection>
               <Name value="genres" />
               <Caption value="Genres" />
@@ -1153,16 +1548,10 @@
               <Caption value="Type" />
               <IsRequired value="True" />
               <MetaType reference="+MetaTypes.type" />
+              <OnUserChange>
+                <ActionEvent ReferencedAction="+UiParts.mainList.action3" />
+              </OnUserChange>
             </Attribute>
-            <Collection>
-              <Name value="starring" />
-              <Caption value="Starring" />
-              <Children>
-                <Include>
-                  <Include reference="+DataEntities.staring" />
-                </Include>
-              </Children>
-            </Collection>
             <Collection>
               <Name value="seasons" />
               <Caption value="Seasons" />
@@ -1190,29 +1579,41 @@
                 </Collection>
               </Children>
             </Collection>
+            <Collection>
+              <Name value="starring" />
+              <Caption value="Starring" />
+              <Children>
+                <Include>
+                  <Include reference="+DataEntities.staring" />
+                </Include>
+              </Children>
+            </Collection>
           </Children>
         </Complex>
         <Complex>
           <Name value="filter" />
           <Caption value="Filter" />
+          <OnUserChange>
+            <ActionEvent ReferencedAction="+UiParts.mainList.searchAction" />
+          </OnUserChange>
           <Children>
             <Include>
               <Include reference="+DataEntities.movie" />
             </Include>
+            <Attribute>
+              <Name value="type" />
+              <Caption value="Type" />
+              <MetaType reference="+MetaTypes.type" />
+            </Attribute>
             <Complex>
-              <Name value="filterStarring" />
-              <Caption value="Filter starring" />
+              <Name value="starring" />
+              <Caption value="Starring" />
               <Children>
                 <Include>
                   <Include reference="+DataEntities.staring" />
                 </Include>
               </Children>
             </Complex>
-            <Attribute>
-              <Name value="filterType" />
-              <Caption value="Filter type" />
-              <MetaType reference="+MetaTypes.type" />
-            </Attribute>
           </Children>
         </Complex>
         <Collection>
@@ -1238,6 +1639,16 @@
                 <Include>
                   <Include reference="+DataEntities.ratingMovies" />
                 </Include>
+                <Computed>
+                  <Name value="_rating" />
+                  <Caption value="_ rating" />
+                  <Expression IsValid="True">
+                    <ExpressionText><![CDATA[tostring(this.score) + "/10"]]></ExpressionText>
+                    <ResultType>
+                      <BaseType value="String" />
+                    </ResultType>
+                  </Expression>
+                </Computed>
               </Children>
             </Collection>
             <Attribute>
@@ -1270,6 +1681,16 @@
                     <Include>
                       <Include reference="+DataEntities.ratingSeries" />
                     </Include>
+                    <Computed>
+                      <Name value="_ratingEp" />
+                      <Caption value="_ rating ep" />
+                      <Expression IsValid="True">
+                        <ExpressionText><![CDATA[tostring(this.score) + "/10"]]></ExpressionText>
+                        <ResultType>
+                          <BaseType value="String" />
+                        </ResultType>
+                      </Expression>
+                    </Computed>
                   </Children>
                 </Collection>
               </Children>
@@ -1296,6 +1717,137 @@
             </Attribute>
           </Children>
         </Reference>
+        <Attribute>
+          <Name value="confirmResult" />
+          <Caption value="Confirm result" />
+          <DataContextParameter.IsInput value="True" />
+          <DeclaredType>
+            <AttributeType>
+              <BaseType value="Bool" />
+            </AttributeType>
+          </DeclaredType>
+        </Attribute>
+        <Attribute>
+          <Name value="deleteVisible" />
+          <Caption value="Delete visible" />
+          <DataContextParameter.IsInput value="True" />
+          <DeclaredType>
+            <AttributeType>
+              <BaseType value="Bool" />
+            </AttributeType>
+          </DeclaredType>
+        </Attribute>
+        <Attribute>
+          <Name value="editVisible" />
+          <Caption value="Edit visible" />
+          <DataContextParameter.IsInput value="True" />
+          <DeclaredType>
+            <AttributeType>
+              <BaseType value="Bool" />
+            </AttributeType>
+          </DeclaredType>
+        </Attribute>
+        <Collection>
+          <Name value="movieSearch" />
+          <Caption value="Movie search" />
+          <Children>
+            <Include>
+              <Include reference="+DataEntities.movie" />
+            </Include>
+            <Collection>
+              <Name value="rating" />
+              <Caption value="Rating" />
+              <Children>
+                <Include>
+                  <Include reference="+DataEntities.ratingMovies" />
+                </Include>
+                <Computed>
+                  <Name value="_rating" />
+                  <Caption value="_ rating" />
+                  <Expression IsValid="True">
+                    <ExpressionText><![CDATA[tostring(this.score) + "/10"]]></ExpressionText>
+                    <ResultType>
+                      <BaseType value="String" />
+                    </ResultType>
+                  </Expression>
+                </Computed>
+              </Children>
+            </Collection>
+            <Collection>
+              <Name value="starring" />
+              <Caption value="Starring" />
+              <Children>
+                <Include>
+                  <Include reference="+DataEntities.staring" />
+                </Include>
+              </Children>
+            </Collection>
+            <Attribute>
+              <Name value="type" />
+              <Caption value="Type" />
+              <DeclaredType>
+                <AttributeType />
+              </DeclaredType>
+            </Attribute>
+            <Collection>
+              <Name value="seasons" />
+              <Caption value="Seasons" />
+              <Children>
+                <Include>
+                  <Include reference="+DataEntities.seasons" />
+                </Include>
+                <Collection>
+                  <Name value="episodes" />
+                  <Caption value="Episodes" />
+                  <Children>
+                    <Include>
+                      <Include reference="+DataEntities.episodes" />
+                    </Include>
+                  </Children>
+                </Collection>
+                <Collection>
+                  <Name value="rating" />
+                  <Caption value="Rating" />
+                  <Children>
+                    <Include>
+                      <Include reference="+DataEntities.ratingSeries" />
+                    </Include>
+                    <Computed>
+                      <Name value="_ratingEp" />
+                      <Caption value="_ rating ep" />
+                      <Expression IsValid="True">
+                        <ExpressionText><![CDATA[tostring(this.score) + "/10"]]></ExpressionText>
+                        <ResultType>
+                          <BaseType value="String" />
+                        </ResultType>
+                      </Expression>
+                    </Computed>
+                  </Children>
+                </Collection>
+              </Children>
+            </Collection>
+          </Children>
+        </Collection>
+        <Attribute>
+          <Name value="moviesVisibility" />
+          <Caption value="Movies visibility" />
+          <DataContextParameter.IsInput value="True" />
+          <DeclaredType>
+            <AttributeType>
+              <BaseType value="Bool" />
+            </AttributeType>
+          </DeclaredType>
+        </Attribute>
+        <Attribute>
+          <Name value="searchVisibility" />
+          <Caption value="Search visibility" />
+          <DataContextParameter.IsInput value="True" />
+          <DeclaredType>
+            <AttributeType>
+              <BaseType value="Bool" />
+            </AttributeType>
+          </DeclaredType>
+        </Attribute>
       </Children>
     </DataContext>
   </DataContext>
@@ -1307,31 +1859,18 @@
       <Name value="init" />
       <ActionLangBody IsValid="True">
         <Script><![CDATA[// load movies list
-var x = apiobjects.serverConnection1.getAsync("list")
+var x = apiobjects.serverConnection.getAsync("list")
 var y = x.getJsonString()
 
 form.movies.fromJson(y)
 
 
 // prepare add form
-form.complex.starring.addItem()
-form.complex.genres.addItem()
+form.moviesVisibility = true
+form.searchVisibility = false
+form.editVisible = true
 
-]]></Script>
-      </ActionLangBody>
-      <DataContext>
-        <ActionDataContext />
-      </DataContext>
-    </ActionBlock>
-    <ActionBlock>
-      <Name value="handler_dataContext1_OnUserChange" />
-      <IsPrivate value="True" />
-      <ActionLangBody IsValid="True">
-        <Script><![CDATA[if form.complex.type.enumValue() = "series" then
-	form.seriesVisible = true
-	else
-	form.seriesVisible = false
-endif]]></Script>
+system.console(y)]]></Script>
       </ActionLangBody>
       <DataContext>
         <ActionDataContext />
@@ -1343,7 +1882,15 @@ endif]]></Script>
       <ActionLangBody IsValid="True">
         <Script><![CDATA[form.addMovie = true
 form.searchMovie = false
-form.complex.type.setTouched(false)]]></Script>
+form.deleteVisible = false
+form.editVisible = true
+form.complex.type.setTouched(false)
+
+
+if form.complex.isValid() then
+	form.complex.starring.addItem()
+	form.complex.genres.addItem()
+endif]]></Script>
       </ActionLangBody>
       <DataContext>
         <ActionDataContext />
@@ -1354,7 +1901,9 @@ form.complex.type.setTouched(false)]]></Script>
       <IsPrivate value="True" />
       <ActionLangBody IsValid="True">
         <Script><![CDATA[form.searchMovie = true
-form.addMovie = false]]></Script>
+form.addMovie = false
+form.deleteVisible = false
+form.editVisible = true]]></Script>
       </ActionLangBody>
       <DataContext>
         <ActionDataContext />
@@ -1371,10 +1920,10 @@ form.addMovie = false]]></Script>
       </DataContext>
     </ActionBlock>
     <ActionBlock>
-      <Name value="saveBook" />
+      <Name value="saveMovie" />
       <ActionLangBody IsValid="True">
         <Script><![CDATA[//if form.complex.isValid() then
-apiobjects.serverConnection1.postAsync("create", form.complex.toJson())
+apiobjects.serverConnection.postAsync("create", form.complex.toJson())
 /*else
 	system.consoleError("Something is wrong")
 endif*/
@@ -1389,8 +1938,15 @@ navigation.main.mainList.go()]]></Script>
       <Name value="handler_btnDelete_OnClick" />
       <IsPrivate value="True" />
       <ActionLangBody IsValid="True">
-        <Script><![CDATA[form.complex.id = params.data.id
-apiobjects.serverConnection1.postAsync("delete", form.complex.toJson())
+        <Script><![CDATA[//page.confirm!!
+form.complex.id = params.data.id
+
+if form.complex.id = params.data.id then
+	form.confirmResult = apiobjects.page.confirm("Do you really want to delete " + params.data.name + " " + params.data.type + " from your database?")
+	if form.confirmResult = true then
+		apiobjects.serverConnection.postAsync("delete", form.complex.toJson())
+	endif
+endif
 
 navigation.main.mainList.go()]]></Script>
       </ActionLangBody>
@@ -1464,7 +2020,186 @@ episodeAdd.episodes.addItem()]]></Script>
       <Name value="handler_btnMain_OnClick" />
       <IsPrivate value="True" />
       <ActionLangBody IsValid="True">
-        <Script><![CDATA[navigation.main.mainList.go()]]></Script>
+        <Script><![CDATA[navigation.main.mainList.go()
+]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="handler_btnEditList_OnClick" />
+      <IsPrivate value="True" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[form.deleteVisible = true
+form.editVisible = false]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="handler_btnCloseEdit_OnClick" />
+      <IsPrivate value="True" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[form.deleteVisible = false
+form.editVisible = true]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="handler_btnEditDetail_OnClick" />
+      <IsPrivate value="True" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[navigation.main.editMovie.go(params.data.id)]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="searchAction" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[var nameToLow = toLower(form.filter.name)
+var starToLow = toLower(form.filter.starring.actorName)
+
+
+// searching by type
+if form.filter.type.hasValue() then
+	if form.filter.type.enumValue() = "series" then
+		form.actions.init()
+		foreach item in form.movies do
+			var movies = form.movies.selectFirst(current.type = "movie")
+			movies.removeMe()
+			form.deleteVisible = false
+		endfor
+	endif
+	if form.filter.type.enumValue() = "movie" then
+		foreach item in form.movies do
+			form.actions.init()
+			var series = form.movies.selectFirst(current.type = "series")
+			series.removeMe()	
+			form.deleteVisible = false
+		endfor
+	endif
+else
+	form.actions.init()
+	form.filter.name.setTouched(false)
+	form.deleteVisible = false
+endif
+
+// searching by name
+if form.filter.starring.hasValue() then
+	form.movieSearch.clear()
+	form.filter.starring.actorName = toLower(form.filter.starring.actorName)
+	foreach item in form.movies do
+		var actorNameLow = toLower(item.starring.toJson())
+		if indexOf(actorNameLow, starToLow) <> 0 then
+			var found = form.movieSearch.addItem()
+			found.id = item.id
+			found.name = item.name
+			found.type = item.type
+			found.yearOfRelease = item.yearOfRelease
+			found.starring = item.starring
+		endif
+	endfor
+	form.moviesVisibility = false
+	form.searchVisibility = true
+endif	
+
+// searching by name
+if form.filter.name.hasValue() then
+	form.movieSearch.clear()
+	form.filter.name = toLower(form.filter.name)
+	foreach item in form.movies do
+		var nameLow = toLower(item.name)
+		if indexOf(nameLow, nameToLow) <> 0 then
+			var found = form.movieSearch.addItem()
+			found.id = item.id
+			found.name = item.name
+			found.type = item.type
+			found.yearOfRelease = item.yearOfRelease
+			found.starring = item.starring
+		endif
+	endfor
+	form.moviesVisibility = false
+	form.searchVisibility = true
+endif	
+]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="action3" />
+      <IsPrivate value="True" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[if form.complex.type.enumValue() = "series" then
+	form.seriesVisible = true
+    else
+    form.seriesVisible = false
+	if form.complex.seasons.hasValue() then
+		var confirmDelete = apiobjects.page.confirm("This action will delete all data in season section. Are you sure that you want delete it?")
+		if confirmDelete = true then
+			form.complex.seasons.clear()
+		else
+			form.complex.type.clear()
+		endif
+	endif
+endif]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="handler_btnSort_OnClick" />
+      <IsPrivate value="True" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[//zcx]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="handler_btnDetailSearch_OnClick" />
+      <IsPrivate value="True" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[navigation.main.detailMovie.go(params.data.id)]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="handler_btnEditSearch_OnClick" />
+      <IsPrivate value="True" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[navigation.main.editMovie.go(params.data.id)]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="handler_btnDeleteSearch_OnClick" />
+      <IsPrivate value="True" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[//page.confirm!!
+form.complex.id = params.data.id
+
+if form.complex.id = params.data.id then
+	form.confirmResult = apiobjects.page.confirm("Do you really want to delete " + params.data.name + " " + params.data.type + " from your database?")
+	if form.confirmResult = true then
+		apiobjects.serverConnection.postAsync("delete", form.complex.toJson())
+	endif
+endif
+
+navigation.main.mainList.go()]]></Script>
       </ActionLangBody>
       <DataContext>
         <ActionDataContext />
@@ -1488,5 +2223,14 @@ episodeAdd.episodes.addItem()]]></Script>
         </CodelistColumn>
       </columns>
     </Codelist>
+    <ListCtrl identity="ListCtrl.459ff3780ab145df985191cfc1336ce1">
+      <Name value="listCtrl" />
+      <server reference="+GlobalApiObjects.serverConnection" />
+    </ListCtrl>
+    <DeclListQuery identity="DeclListQuery.f41d2c211a8f43618588763e63b56065">
+      <Name value="declListQuery" />
+      <listName value="list" />
+      <server reference="+GlobalApiObjects.serverConnection" />
+    </DeclListQuery>
   </ApiObjects>
 </Form>

@@ -16,7 +16,9 @@
       <Caption value="Name" />
       <IsRequired value="True" />
       <DeclaredType>
-        <AttributeType />
+        <AttributeType>
+          <StrMinLength value="1" />
+        </AttributeType>
       </DeclaredType>
     </Attribute>
     <Attribute>
@@ -25,6 +27,8 @@
       <DeclaredType>
         <AttributeType>
           <BaseType value="Integer" />
+          <IntMax value="2019" />
+          <IntMin value="1900" />
         </AttributeType>
       </DeclaredType>
     </Attribute>
@@ -32,7 +36,9 @@
       <Name value="mainDirector" />
       <Caption value="Main director" />
       <DeclaredType>
-        <AttributeType />
+        <AttributeType>
+          <StrMinLength value="1" />
+        </AttributeType>
       </DeclaredType>
     </Attribute>
     <Attribute>

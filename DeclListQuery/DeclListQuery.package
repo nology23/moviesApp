@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<Package IsComponentLib="True">
+  <Identity value="DeclListQuery.f41d2c211a8f43618588763e63b56065" />
+  <Version value="1.0.2" />
+  <Items>
+    <PackageItem Src="DeclListQuery.apiObjectManifest" />
+    <ResourceItem ResourceName="declListQuery.js" Action="None" OutputFileName="declListQuery.js" Src="declListQuery.js" />
+    <PackageItem Src="DeclListQueryResponse.apiObjectManifest" />
+  </Items>
+</Package>

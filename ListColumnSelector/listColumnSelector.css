@@ -1,0 +1,92 @@
+.sffw-listcolumn-selector-button {
+    outline: medium none;
+    background-color: #5f7599;
+    color: white;
+    border: 0px solid transparent;
+    -webkit-border-radius: 0px;
+            border-radius: 0px;
+    padding: 4px;
+    vertical-align: middle;
+    float: right;
+}
+
+.sffw-listcolumn-selector-button:active {
+    background-color: #1d1d1d;
+}
+
+.sffw-listcolumn-selector {
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.sffw-listcolumn-selector > div {
+    display: inline-block;
+    vertical-align: top;
+    border: 1px black solid;
+    min-width: 9rem;
+    min-height: 5rem
+}
+
+.sffw-listcolumn-selector > div.sffw-listcolumn-selector-columns {
+    margin-top: 5px;
+}
+
+.sffw-listcolumn-selector > div.sffw-listcolumn-selector-buttons {
+    border: none;
+    min-width: 5rem;
+}
+
+.sffw-listcolumn-selector ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 3px;
+    display: inline-block;
+    border-collapse: separate;
+    border-spacing: 2px;
+}
+
+.sffw-listcolumn-selector ul > li {
+    border: 1px solid lightgray;
+    background-color: #e6e6e6;
+    margin: 2px;
+    padding-left: 5px;
+    padding-right: 5px;
+    line-height: 1.5rem;
+    text-align: left;
+    display: table-row;
+}
+
+.sffw-listcolumn-selector > div.sffw-listcolumn-selector-buttons ul > li {
+    background-color: transparent;
+}
+
+.sffw-listcolumn-selector ul.sffw-listcolumn-selector-buttons > li {
+    border: none;
+    background-color: transparent;
+}
+
+.sffw-listcolumn-selector ul > li > button {
+    width: 100%;
+}
+
+.sffw-listcolumn-selector ul > li > label {
+    display: table-cell;
+    vertical-align: middle;
+    padding-left: 5px;
+    padding-right: 10px;
+}
+
+.sffw-listcolumn-selector ul > li > label > span {
+    padding-left: 1em;
+    vertical-align: bottom;
+}
+
+.sffw-listcolumn-selector ul > li > div > button {
+    display: block;
+    padding: 1px;
+}

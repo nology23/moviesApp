@@ -18,5 +18,6 @@
     <PackageItem Src="globalVariables.globalVariables" />
     <PackageItem Src="detailMovie.form" />
     <PackageItem Src="globalActions.globalActions" />
+    <PackageItem Src="editMovie.form" />
   </Items>
 </Package>

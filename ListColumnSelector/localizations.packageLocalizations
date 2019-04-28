@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<PackageLocalizations>
+  <Name value="localizations" />
+  <Strings>
+    <LocalizedString LocID="saveAndClose">
+      <Values>
+        <LocaleValue Lang="en" Value="Save and close" />
+        <LocaleValue Lang="fi" Value="Tallenna ja sulje" />
+        <LocaleValue Lang="sr" Value="Sačuvaj i zatvori" />
+        <LocaleValue Lang="sv" Value="Spara och Stäng" />
+        <LocaleValue Lang="cs" Value="Uložit a zavřít" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="cancelAndClose">
+      <Values>
+        <LocaleValue Lang="en" Value="Cancel and close" />
+        <LocaleValue Lang="fi" Value="Peruuta ja sulje" />
+        <LocaleValue Lang="sr" Value="Otkazivanje i zatvaranje" />
+        <LocaleValue Lang="sv" Value="Avbryt och Stäng" />
+        <LocaleValue Lang="cs" Value="Zrušit a zavřít" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="moveUp">
+      <Values>
+        <LocaleValue Lang="en" Value="Move up" />
+        <LocaleValue Lang="cs" Value="Přesunout nahoru" />
+        <LocaleValue Lang="sv" Value="Flytta upp" />
+        <LocaleValue Lang="fi" Value="Siirrä ylös" />
+        <LocaleValue Lang="sr" Value="Premeštanje nagore" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="moveDown">
+      <Values>
+        <LocaleValue Lang="en" Value="Move down" />
+        <LocaleValue Lang="cs" Value="Přesunout dolů" />
+        <LocaleValue Lang="sv" Value="Flytta ned" />
+        <LocaleValue Lang="fi" Value="Siirrä alas" />
+        <LocaleValue Lang="sr" Value="Spusti se" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="moveLeft">
+      <Values>
+        <LocaleValue Lang="en" Value="Move selected left" />
+        <LocaleValue Lang="fi" Value="Siirrä valitut vasemmalle" />
+        <LocaleValue Lang="sr" Value="Idi izabrali levo" />
+        <LocaleValue Lang="cs" Value="Přesunout vybrané vlevo" />
+        <LocaleValue Lang="sv" Value="Flytta markerad vänster" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="moveRight">
+      <Values>
+        <LocaleValue Lang="en" Value="Move selected right" />
+        <LocaleValue Lang="fi" Value="Siirtää valitun oikealle" />
+        <LocaleValue Lang="sr" Value="Premesti izabrane desno" />
+        <LocaleValue Lang="cs" Value="Přesunout vybrané vpravo" />
+        <LocaleValue Lang="sv" Value="Flytta valda höger" />
+      </Values>
+    </LocalizedString>
+  </Strings>
+</PackageLocalizations>
