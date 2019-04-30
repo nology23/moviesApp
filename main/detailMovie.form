@@ -423,7 +423,7 @@
                       <Panel.Height value="#" />
                       <Panel.Width value="*" />
                       <Bindings>
-                        <Binding SourceProperty="Data" Expression="number" />
+                        <Binding SourceProperty="Data" Expression="this._seasonNo" />
                       </Bindings>
                       <CssClass>
                         <CssClassConditional>
@@ -775,6 +775,16 @@
                     </Complex>
                   </Children>
                 </Collection>
+                <Computed>
+                  <Name value="_seasonNo" />
+                  <Caption value="_ season no" />
+                  <Expression IsValid="True">
+                    <ExpressionText><![CDATA["Season " + tostring(this.number)]]></ExpressionText>
+                    <ResultType>
+                      <BaseType value="String" />
+                    </ResultType>
+                  </Expression>
+                </Computed>
               </Children>
             </Collection>
           </Children>
@@ -799,7 +809,9 @@ else
 	form.seasons1.fromJson(movieData.extractJson("seasons"))*/
 endif
 
-system.console(movieData.getJsonString())]]></Script>
+system.console(movieData.getJsonString())
+
+form.actions.setUrl()]]></Script>
       </ActionLangBody>
       <DataContext>
         <ActionDataContext />
@@ -820,6 +832,21 @@ system.console(movieData.getJsonString())]]></Script>
       <IsPrivate value="True" />
       <ActionLangBody IsValid="True">
         <Script><![CDATA[navigation.main.editMovie.go(params.data.id)]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="setUrl" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[var url = packages.main.apiobjects.urlRouter.findFormUrl(navigation.main.detailMovie.fullName)
+
+if form.id.hasValue() then
+	url.addString("id", form.id)
+endif
+
+url.updatePageUrl()]]></Script>
       </ActionLangBody>
       <DataContext>
         <ActionDataContext />

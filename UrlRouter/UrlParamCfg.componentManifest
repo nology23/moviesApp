@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.105"?>
+<ComponentManifest>
+  <Name value="UrlParamCfg" />
+  <Generator value="*" />
+  <Properties>
+    <PropertyManifest>
+      <Name value="IsRequired" />
+      <Type value="bool" />
+    </PropertyManifest>
+  </Properties>
+</ComponentManifest>

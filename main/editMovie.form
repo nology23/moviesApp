@@ -263,24 +263,6 @@
                       <Name value="panel5" />
                       <Orientation value="Vertical" />
                       <Children>
-                        <Button>
-                          <Name value="btnAddActor" />
-                          <Caption value="Add actor" />
-                          <Panel.Height value="#" />
-                          <Panel.Width value="150px" />
-                          <OnClick>
-                            <ActionEvent ReferencedAction="~handler_btnAddActor_OnClick" />
-                          </OnClick>
-                          <Bindings>
-                            <Binding SourceProperty="IsEnabled" Expression="this.complexEdit.starring.isValid()" />
-                          </Bindings>
-                          <CssClass>
-                            <CssClassConditional>
-                              <ClassName value="{theme}-button" />
-                              <IsThemedStyle value="True" />
-                            </CssClassConditional>
-                          </CssClass>
-                        </Button>
                         <Panel>
                           <Name value="panel4" />
                           <Orientation value="Horizontal" />
@@ -304,6 +286,7 @@
                                       <Children>
                                         <TextBox>
                                           <Name value="textBox15" />
+                                          <ImmediateUpdate value="True" />
                                           <Panel.Height value="#" />
                                           <Panel.Width value="100%" />
                                           <Bindings>
@@ -383,6 +366,25 @@
                             </CssClassConditional>
                           </CssClass>
                         </Panel>
+                        <Button>
+                          <Name value="btnAddActor" />
+                          <Caption value="Add actor" />
+                          <Panel.Height value="#" />
+                          <Panel.HorizontalAlignment value="Right" />
+                          <Panel.Width value="150px" />
+                          <OnClick>
+                            <ActionEvent ReferencedAction="~handler_btnAddActor_OnClick" />
+                          </OnClick>
+                          <Bindings>
+                            <Binding SourceProperty="IsEnabled" Expression="this.complexEdit.starring.isValid()" />
+                          </Bindings>
+                          <CssClass>
+                            <CssClassConditional>
+                              <ClassName value="{theme}-button" />
+                              <IsThemedStyle value="True" />
+                            </CssClassConditional>
+                          </CssClass>
+                        </Button>
                       </Children>
                       <CssClass>
                         <CssClassConditional>
@@ -412,24 +414,6 @@
                       <Name value="panel6" />
                       <Orientation value="Vertical" />
                       <Children>
-                        <Button>
-                          <Name value="btnAddGenre" />
-                          <Caption value="Add genre" />
-                          <Panel.Height value="#" />
-                          <Panel.Width value="150px" />
-                          <OnClick>
-                            <ActionEvent ReferencedAction="~handler_btnAddGenre_OnClick" />
-                          </OnClick>
-                          <Bindings>
-                            <Binding SourceProperty="IsEnabled" Expression="this.complexEdit.genres.isValid()" />
-                          </Bindings>
-                          <CssClass>
-                            <CssClassConditional>
-                              <ClassName value="{theme}-button" />
-                              <IsThemedStyle value="True" />
-                            </CssClassConditional>
-                          </CssClass>
-                        </Button>
                         <Repeater>
                           <Name value="repeater6" />
                           <Panel.Height value="#" />
@@ -447,6 +431,7 @@
                                   <Children>
                                     <TextBox>
                                       <Name value="textBox16" />
+                                      <ImmediateUpdate value="True" />
                                       <Panel.Height value="#" />
                                       <Panel.Width value="100%" />
                                       <Bindings>
@@ -518,6 +503,25 @@
                             </CssClassConditional>
                           </CssClass>
                         </Repeater>
+                        <Button>
+                          <Name value="btnAddGenre" />
+                          <Caption value="Add genre" />
+                          <Panel.Height value="#" />
+                          <Panel.HorizontalAlignment value="Right" />
+                          <Panel.Width value="150px" />
+                          <OnClick>
+                            <ActionEvent ReferencedAction="~handler_btnAddGenre_OnClick" />
+                          </OnClick>
+                          <Bindings>
+                            <Binding SourceProperty="IsEnabled" Expression="this.complexEdit.genres.isValid()" />
+                          </Bindings>
+                          <CssClass>
+                            <CssClassConditional>
+                              <ClassName value="{theme}-button" />
+                              <IsThemedStyle value="True" />
+                            </CssClassConditional>
+                          </CssClass>
+                        </Button>
                       </Children>
                       <CssClass>
                         <CssClassConditional>
@@ -546,23 +550,6 @@
                       <Name value="panel8" />
                       <Orientation value="Vertical" />
                       <Children>
-                        <Button>
-                          <Name value="btnAddSeason" />
-                          <Caption value="Add season" />
-                          <Panel.Height value="#" />
-                          <Panel.Width value="150px" />
-                          <OnClick>
-                            <ActionEvent ReferencedAction="~handler_btnAddSeason_OnClick" />
-                          </OnClick>
-                          <Bindings>
-                            <Binding SourceProperty="IsEnabled" Expression="this.complexEdit.seasons.isValid()" />
-                          </Bindings>
-                          <CssClass>
-                            <CssClassConditional>
-                              <ClassName value="{theme}-button" />
-                            </CssClassConditional>
-                          </CssClass>
-                        </Button>
                         <Repeater>
                           <Name value="repeater7" />
                           <Panel.Height value="#" />
@@ -580,18 +567,18 @@
                                   <Children>
                                     <Panel>
                                       <Name value="panel22" />
-                                      <Orientation value="Vertical" />
+                                      <Orientation value="Horizontal" />
                                       <Panel.Height value="#" />
                                       <Panel.Width value="*" />
                                       <Children>
                                         <TextBox>
                                           <Name value="textBox17" />
+                                          <Caption value="Season" />
                                           <Panel.Height value="#" />
                                           <Panel.Width value="200px" />
                                           <Bindings>
                                             <Binding SourceProperty="Data" Expression="number" />
                                             <Binding SourceProperty="IsRequiredMarkVisible" Expression="number.isRequired()" />
-                                            <Binding SourceProperty="Caption" Expression="number.caption()" />
                                           </Bindings>
                                           <CssClass>
                                             <CssClassConditional>
@@ -655,23 +642,6 @@
                                       <Name value="panel15" />
                                       <Orientation value="Vertical" />
                                       <Children>
-                                        <Button>
-                                          <Name value="btnAddEpisode" />
-                                          <Caption value="Add episode" />
-                                          <Panel.Height value="#" />
-                                          <Panel.Width value="150px" />
-                                          <OnClick>
-                                            <ActionEvent ReferencedAction="~handler_btnAddEpisode_OnClick" />
-                                          </OnClick>
-                                          <Bindings>
-                                            <Binding SourceProperty="IsEnabled" Expression="this.episodes.isValid()" />
-                                          </Bindings>
-                                          <CssClass>
-                                            <CssClassConditional>
-                                              <ClassName value="{theme}-button" />
-                                            </CssClassConditional>
-                                          </CssClass>
-                                        </Button>
                                         <Repeater>
                                           <Name value="repeater8" />
                                           <Panel.Height value="#" />
@@ -689,6 +659,7 @@
                                                   <Children>
                                                     <TextBox>
                                                       <Name value="textBox18" />
+                                                      <ImmediateUpdate value="True" />
                                                       <Panel.Height value="#" />
                                                       <Panel.Width value="100%" />
                                                       <Bindings>
@@ -864,6 +835,24 @@
                                             </CssClassConditional>
                                           </CssClass>
                                         </Repeater>
+                                        <Button>
+                                          <Name value="btnAddEpisode" />
+                                          <Caption value="Add episode" />
+                                          <Panel.Height value="#" />
+                                          <Panel.HorizontalAlignment value="Right" />
+                                          <Panel.Width value="150px" />
+                                          <OnClick>
+                                            <ActionEvent ReferencedAction="~handler_btnAddEpisode_OnClick" />
+                                          </OnClick>
+                                          <Bindings>
+                                            <Binding SourceProperty="IsEnabled" Expression="this.episodes.isValid()" />
+                                          </Bindings>
+                                          <CssClass>
+                                            <CssClassConditional>
+                                              <ClassName value="{theme}-button" />
+                                            </CssClassConditional>
+                                          </CssClass>
+                                        </Button>
                                       </Children>
                                       <CssClass>
                                         <CssClassConditional>
@@ -902,6 +891,24 @@
                             </CssClassConditional>
                           </CssClass>
                         </Repeater>
+                        <Button>
+                          <Name value="btnAddSeason" />
+                          <Caption value="Add season" />
+                          <Panel.Height value="#" />
+                          <Panel.HorizontalAlignment value="Right" />
+                          <Panel.Width value="150px" />
+                          <OnClick>
+                            <ActionEvent ReferencedAction="~handler_btnAddSeason_OnClick" />
+                          </OnClick>
+                          <Bindings>
+                            <Binding SourceProperty="IsEnabled" Expression="this.complexEdit.seasons.isValid()" />
+                          </Bindings>
+                          <CssClass>
+                            <CssClassConditional>
+                              <ClassName value="{theme}-button" />
+                            </CssClassConditional>
+                          </CssClass>
+                        </Button>
                       </Children>
                       <CssClass>
                         <CssClassConditional>

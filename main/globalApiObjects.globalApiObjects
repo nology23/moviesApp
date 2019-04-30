@@ -12,5 +12,16 @@
     <Page identity="Page.f7aa0c151c64407daef13910dcf7b72a">
       <Name value="page" />
     </Page>
+    <UrlRouter identity="UrlRouter.69a71809c45249cbb2999d13bb9100c0">
+      <Name value="urlRouter" />
+      <routes>
+        <UrlRouteCfg identity="UrlRouter.69a71809c45249cbb2999d13bb9100c0">
+          <form reference="+UiParts.detailMovie" />
+          <masterPage reference="+UiParts.master" />
+          <params value="id?" />
+          <url value="routing" />
+        </UrlRouteCfg>
+      </routes>
+    </UrlRouter>
   </ApiObjects>
 </GlobalApiObjects>

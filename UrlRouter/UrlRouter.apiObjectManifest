@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<ApiObjectManifest>
+  <Name value="UrlRouter" />
+  <Generator value="urlRouter.js" />
+  <Contracts>
+    <ImplementsContractManifest>
+      <Name value="IUrlRouter" />
+    </ImplementsContractManifest>
+  </Contracts>
+  <Methods>
+    <MethodManifest>
+      <Name value="clearUrl" />
+      <ReturnType />
+    </MethodManifest>
+    <MethodManifest>
+      <Name value="findFormUrl" />
+      <ReturnType>
+        <ObjectType reference="+Components.UrlModel" />
+      </ReturnType>
+      <Parameters>
+        <ParameterManifest>
+          <BaseType value="String" />
+          <Name value="fullname" />
+        </ParameterManifest>
+      </Parameters>
+    </MethodManifest>
+    <MethodManifest>
+      <Name value="setDataHasChanged" />
+      <Description value="If registerBeforeUnload property is set to True, call setDataChanged(false) in activate of every form and setDataChanged(true) when the state of application/data changes in way that you want to warn user before leaving current url." />
+      <ReturnType />
+      <Parameters>
+        <ParameterManifest>
+          <BaseType value="Bool" />
+          <Name value="changed" />
+        </ParameterManifest>
+      </Parameters>
+    </MethodManifest>
+  </Methods>
+  <Properties>
+    <PropertyManifest>
+      <Name value="routes" />
+      <Type value="collection-UrlRouteCfg" />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="registerBeforeUnloadConfirm" />
+      <Type value="bool" />
+      <UiCaption value="Register beforeunload handler" />
+      <UiDescription value="Register browser beforeunload event handler. Triggering of confirm popup is controlled by calling setDataChanged() method of UrlRouter. Call setDataChanged(false) in activate of every form and setDataChanged(true) when the state of application/data changes in way that you want to warn user before leaving current url." />
+    </PropertyManifest>
+  </Properties>
+</ApiObjectManifest>

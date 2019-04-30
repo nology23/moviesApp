@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<MetaType>
+  <Name value="searchSort" />
+  <Caption value="Search sort" />
+  <TypeSpec>
+    <AttributeType>
+      <BaseType value="Enum" />
+      <EnumValues>
+        <AttributeEnumValue>
+          <Name value="name" />
+          <Caption value="Movie name" />
+          <Value value="name" />
+        </AttributeEnumValue>
+        <AttributeEnumValue>
+          <Name value="actorName" />
+          <Caption value="Actor name" />
+          <Value value="actorName" />
+        </AttributeEnumValue>
+        <AttributeEnumValue>
+          <Name value="type" />
+          <Caption value="Type" />
+          <Value value="type" />
+        </AttributeEnumValue>
+      </EnumValues>
+    </AttributeType>
+  </TypeSpec>
+</MetaType>

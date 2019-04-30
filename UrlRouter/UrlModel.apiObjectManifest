@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<ApiObjectManifest>
+  <Name value="UrlModel" />
+  <Generator value="*" />
+  <IsInstantiable value="False" />
+  <Methods>
+    <MethodManifest>
+      <Name value="addString" />
+      <ReturnType>
+        <ObjectType reference="+Components.UrlModel" />
+      </ReturnType>
+      <Parameters>
+        <ParameterManifest>
+          <BaseType value="String" />
+          <Name value="name" />
+        </ParameterManifest>
+        <ParameterManifest>
+          <BaseType value="String" />
+          <Name value="value" />
+        </ParameterManifest>
+      </Parameters>
+    </MethodManifest>
+    <MethodManifest>
+      <Name value="addInt" />
+      <ReturnType>
+        <ObjectType reference="+Components.UrlModel" />
+      </ReturnType>
+      <Parameters>
+        <ParameterManifest>
+          <BaseType value="String" />
+          <Name value="name" />
+        </ParameterManifest>
+        <ParameterManifest>
+          <BaseType value="Integer" />
+          <Name value="value" />
+        </ParameterManifest>
+      </Parameters>
+    </MethodManifest>
+    <MethodManifest>
+      <Name value="updatePageUrl" />
+      <ReturnType>
+        <ObjectType reference="+Components.UrlModel" />
+      </ReturnType>
+    </MethodManifest>
+  </Methods>
+</ApiObjectManifest>

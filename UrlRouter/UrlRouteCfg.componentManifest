@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<ComponentManifest>
+  <Name value="UrlRouteCfg" />
+  <Generator value="*" />
+  <Type value="ScreenFactory.Data.Core.MetaObject" />
+  <Properties>
+    <PropertyManifest>
+      <Name value="form" />
+      <IsRequired value="True" />
+      <Type value="ScreenFactory.Data.Model.Ui.Form" />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="url" />
+      <IsRequired value="True" />
+      <Type value="string" />
+      <UiCaption value="Form url alias" />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="masterPage" />
+      <Type value="ScreenFactory.Data.Model.Ui.Form" />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="params" />
+      <Type value="string" />
+    </PropertyManifest>
+  </Properties>
+</ComponentManifest>

@@ -19,5 +19,7 @@
     <PackageItem Src="detailMovie.form" />
     <PackageItem Src="globalActions.globalActions" />
     <PackageItem Src="editMovie.form" />
+    <PackageItem Src="searchSort.metaType" />
+    <PackageItem Src="movieYearScore.metaType" />
   </Items>
 </Package>

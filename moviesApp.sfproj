@@ -70,5 +70,9 @@
       <ReferencedIdentity value="DeclListQuery.f41d2c211a8f43618588763e63b56065" />
       <ReferencedVersion value="1.0.2" />
     </PackageReference>
+    <PackageReference Alias="UrlRouter" IsComponentLib="True" Origin="UrlRouter\UrlRouter.package">
+      <ReferencedIdentity value="UrlRouter.69a71809c45249cbb2999d13bb9100c0" />
+      <ReferencedVersion value="3.0.1" />
+    </PackageReference>
   </PackageReferences>
 </ProjectRoot>
