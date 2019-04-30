@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<Package IsComponentLib="True">
+  <Identity value="busyIndicator.4a8ce8836eb04d7bbc155c7119f0193e" />
+  <Version value="2.0.0" />
+  <Items>
+    <PackageItem Src="BusyIndicator.componentManifest" />
+    <PackageItem Src="InContentBusyIndicator.componentManifest" />
+    <ResourceItem ResourceName="inContentGenerator.js" Action="None" OutputFileName="inContentGenerator.js" Src="inContentGenerator.js" />
+    <ResourceItem ResourceName="busyIndicator.js" LinkerAction="Script" OutputFileName="busyIndicator.js" Src="busyIndicator.js" />
+    <ResourceItem ResourceName="busyIndicator.css" LinkerAction="Css" OutputFileName="busyIndicator.css" Src="busyIndicator.css" />
+  </Items>
+</Package>

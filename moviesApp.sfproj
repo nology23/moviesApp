@@ -78,5 +78,13 @@
       <ReferencedIdentity value="EventDispatcher.eb764ceb30274f1e9a3d051d512d6b26" />
       <ReferencedVersion value="1.0.1" />
     </PackageReference>
+    <PackageReference Alias="jQueryPackage" IsComponentLib="True" Origin="jQueryPackage\jQueryPackage.package">
+      <ReferencedIdentity value="jQueryPackage.969dfbfe76454b4187e210594a2a988b" />
+      <ReferencedVersion value="0.0.0" />
+    </PackageReference>
+    <PackageReference Alias="busyIndicator" IsComponentLib="True" Origin="BusyIndicator\BusyIndicator.package">
+      <ReferencedIdentity value="busyIndicator.4a8ce8836eb04d7bbc155c7119f0193e" />
+      <ReferencedVersion value="2.0.0" />
+    </PackageReference>
   </PackageReferences>
 </ProjectRoot>

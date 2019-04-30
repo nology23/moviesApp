@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<Package IsComponentLib="True">
+  <Identity value="jQueryPackage.969dfbfe76454b4187e210594a2a988b" />
+  <Items>
+    <ResourceItem ResourceName="jquery-ui.min.css" LinkerAction="Css" OutputFileName="jquery-ui.min.css" Src="jquery-ui.min.css" />
+    <ResourceItem ResourceName="jquery-ui.min.js" LinkerAction="Script" OutputFileName="jquery-ui.min.js" Src="jquery-ui.min.js" />
+    <ResourceItem ResourceName="jquery-ui.structure.min.css" LinkerAction="Css" OutputFileName="jquery-ui.structure.min.css" Src="jquery-ui.structure.min.css" />
+    <ResourceItem ResourceName="jquery-ui.theme.min.css" LinkerAction="Css" OutputFileName="jquery-ui.theme.min.css" Src="jquery-ui.theme.min.css" />
+  </Items>
+</Package>

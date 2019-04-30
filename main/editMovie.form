@@ -1102,6 +1102,16 @@
             </AttributeType>
           </DeclaredType>
         </Attribute>
+        <Attribute>
+          <Name value="backConfirm" />
+          <Caption value="Back confirm" />
+          <DataContextParameter.IsInput value="True" />
+          <DeclaredType>
+            <AttributeType>
+              <BaseType value="Bool" />
+            </AttributeType>
+          </DeclaredType>
+        </Attribute>
       </Children>
     </DataContext>
   </DataContext>
@@ -1119,6 +1129,8 @@ else
 	apiobjects.breadcrumbsCtrl.addBreadcrumb("breadcrumbs", "Edit", "", "", false)
 endif
 
+
+
 var movieData = apiobjects.serverConnection.getAsync("record?id=" + form.id)
 if movieData.isError() then
 	system.consoleError(movieData.getErrorMessage())
@@ -1134,6 +1146,7 @@ if form.complexEdit.type.enumValue() = "series" then
 else
 	form.editVisibility = false
 endif
+
 
 system.console(movieData.getJsonString())]]></Script>
       </ActionLangBody>
@@ -1155,7 +1168,10 @@ system.console(movieData.getJsonString())]]></Script>
       <Name value="handler_btnDetail_OnClick" />
       <IsPrivate value="True" />
       <ActionLangBody IsValid="True">
-        <Script><![CDATA[navigation.main.detailMovie.go(params.data.id)]]></Script>
+        <Script><![CDATA[form.backConfirm = apiobjects.page.confirm("This action will cancel all your changes. Do you want that?")
+if form.backConfirm = true then
+	navigation.main.detailMovie.go(params.data.id)
+endif]]></Script>
       </ActionLangBody>
       <DataContext>
         <ActionDataContext />

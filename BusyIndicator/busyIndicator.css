@@ -1,0 +1,57 @@
+.sffw-busy-indicator {
+    text-align: center;
+    position: fixed;
+    display: table;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1009;
+    background-color: rgba(211,211,211, 0.5);
+}
+
+.sffw-busy-indicator-content-body {
+    vertical-align: middle;
+    width: 300px;
+    display: table-cell;
+}
+
+.sffw-busy-indicator-loadingimage {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.sffw-busy-indicator-loadingimage > img {
+    width: 150px;
+    height: 150px;
+}
+
+.sffw-busy-indicator-loadingimage >  i{
+    font-size: 50px;
+    color: gray;
+    /*height: 100%;*/
+}
+
+.sffw-busy-indicator-statustext > span{
+    color: darkgray;
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.sffw-incontent-wrapper {
+    position: relative;
+}
+
+.sffw-incontent-busy-indicator {
+    text-align: center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1009;
+    background-color: rgba(211,211,211,0.5);
+}

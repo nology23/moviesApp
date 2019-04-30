@@ -1015,11 +1015,11 @@
                   <Name value="textBox12" />
                   <Caption value="Movie" />
                   <CaptionVAlign value="Middle" />
+                  <IsVisible value="False" />
                   <Panel.Height value="#" />
                   <Panel.Width value="50%" />
                   <Bindings>
                     <Binding SourceProperty="Data" Expression="filter.name" />
-                    <Binding SourceProperty="IsVisible" Expression="form.nameVisible" />
                   </Bindings>
                   <CssClass>
                     <CssClassConditional>
@@ -1028,6 +1028,27 @@
                     </CssClassConditional>
                   </CssClass>
                 </TextBox>
+                <ReferenceLookup identity="referenceLookup.10b2d4db46e641b5bba23b33e3568c2e">
+                  <Name value="filterLookUpMovie" />
+                  <Caption value="LookUp" />
+                  <DataApiObject reference="~movieName" />
+                  <DisplayMember value="name" />
+                  <MinChars value="0" />
+                  <Panel.Height value="#" />
+                  <Panel.Width value="50%" />
+                  <PanelClass value="" />
+                  <useContains value="False" />
+                  <Bindings>
+                    <Binding SourceProperty="Data" Expression="form.filter.list" />
+                    <Binding SourceProperty="IsVisible" Expression="form.nameVisible" />
+                  </Bindings>
+                  <CssClass>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-referencelookup" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                  </CssClass>
+                </ReferenceLookup>
                 <Panel>
                   <Name value="panel20" />
                   <Orientation value="Vertical" />
@@ -1787,6 +1808,15 @@
             </CssClassConditional>
           </CssClass>
         </Panel>
+        <BusyIndicator identity="busyIndicator.4a8ce8836eb04d7bbc155c7119f0193e">
+          <Name value="busyIndicator1" />
+          <Panel.Height value="#" />
+          <Panel.Width value="*" />
+          <StatusText value="Loading..." />
+          <Bindings>
+            <Binding SourceProperty="IsVisible" Expression="form._hasNoValue" />
+          </Bindings>
+        </BusyIndicator>
       </Children>
       <CssClass>
         <CssClassConditional>
@@ -1940,6 +1970,27 @@
                 </Include>
               </Children>
             </Complex>
+            <Reference>
+              <Name value="list" />
+              <Caption value="List" />
+              <IsRequired value="True" />
+              <Children>
+                <Attribute>
+                  <Name value="id" />
+                  <Caption value="Id" />
+                  <DeclaredType>
+                    <AttributeType />
+                  </DeclaredType>
+                </Attribute>
+                <Attribute>
+                  <Name value="name" />
+                  <Caption value="Name" />
+                  <DeclaredType>
+                    <AttributeType />
+                  </DeclaredType>
+                </Attribute>
+              </Children>
+            </Reference>
           </Children>
         </Complex>
         <Collection>
@@ -2033,26 +2084,6 @@
             </Collection>
           </Children>
         </Collection>
-        <Reference>
-          <Name value="refMovie" />
-          <Caption value="Ref movie" />
-          <Children>
-            <Attribute>
-              <Name value="id" />
-              <Caption value="Id" />
-              <DeclaredType>
-                <AttributeType />
-              </DeclaredType>
-            </Attribute>
-            <Attribute>
-              <Name value="name" />
-              <Caption value="Name" />
-              <DeclaredType>
-                <AttributeType />
-              </DeclaredType>
-            </Attribute>
-          </Children>
-        </Reference>
         <Attribute>
           <Name value="confirmResult" />
           <Caption value="Confirm result" />
@@ -2247,6 +2278,16 @@
             </AttributeType>
           </DeclaredType>
         </Attribute>
+        <Computed>
+          <Name value="_hasNoValue" />
+          <Caption value="_ has no value" />
+          <Expression IsValid="True">
+            <ExpressionText><![CDATA[not form.movies.hasValue()]]></ExpressionText>
+            <ResultType>
+              <BaseType value="Bool" />
+            </ResultType>
+          </Expression>
+        </Computed>
       </Children>
     </DataContext>
   </DataContext>
@@ -2275,7 +2316,6 @@ form.moviesVisibility = true
 form.searchVisibility = false
 form.deleteVisible = false
 form.editVisible = true
-
 
 
 
@@ -2335,6 +2375,14 @@ if apiobjects.breadcrumbsCtrl.count() = 1 then
 else
 	apiobjects.breadcrumbsCtrl.removeTo(1)
 	apiobjects.breadcrumbsCtrl.addBreadcrumb("breadcrumbs", "Search", "", "", false)
+endif
+
+var response = apiobjects.serverConnection.getAsync("list")
+if response.isError() then
+	system.consoleError(response.getErrorMessage())	
+else
+	var codelistData = response.getJsonString()
+	form.apiobjects.movieName.fillFromJson(codelistData)
 endif
 ]]></Script>
       </ActionLangBody>
@@ -2498,7 +2546,7 @@ form.editVisible = true]]></Script>
     <ActionBlock>
       <Name value="searchAction" />
       <ActionLangBody IsValid="True">
-        <Script><![CDATA[var nameToLow = toLower(form.filter.name)
+        <Script><![CDATA[var nameToLow = toLower(form.filter.list.name)
 var starToLow = toLower(form.filter.starring.actorName)
 
 
@@ -2547,9 +2595,9 @@ if form.filter.starring.hasValue() then
 endif	
 
 // searching by name
-if form.filter.name.hasValue() then
+if form.filter.list.hasValue() then
 	form.movieSearch.clear()
-	form.filter.name = toLower(form.filter.name)
+	form.filter.list.name = toLower(form.filter.list.name)
 	foreach item in form.movies do
 		var nameLow = toLower(item.name)
 		if indexOf(nameLow, nameToLow) <> 0 then
@@ -2560,6 +2608,7 @@ if form.filter.name.hasValue() then
 			found.yearOfRelease = item.yearOfRelease
 			found.starring = item.starring
 			found.rating.score = item.rating.score
+			system.console(found.toJson())
 		endif
 	endfor
 	form.moviesVisibility = false
@@ -2789,8 +2838,11 @@ endif]]></Script>
     <Codelist identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
       <Name value="movieName" />
       <autoLoad value="False" />
+      <clientDescriptionColumnName value="name" />
+      <createDescriptionOnClient value="DescriptionOrKey" />
       <filterByDate value="False" />
-      <name value="movieName" />
+      <name value="list" />
+      <server reference="+GlobalApiObjects.serverConnection" />
       <columns>
         <CodelistColumn identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
           <columnName value="id" />

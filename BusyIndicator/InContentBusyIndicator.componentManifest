@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<ComponentManifest>
+  <Name value="InContentBusyIndicator" />
+  <Generator value="inContentGenerator.js" />
+  <Type value="ContentObject" />
+  <UiCaption value="InContentBusyIndicator" />
+  <Properties>
+    <PropertyManifest>
+      <Name value="isLoading" />
+      <Bindable value="True" />
+      <Type value="bool" />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="loadingImageSource" />
+      <Type value="string" />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="iconCssClass" />
+      <Type value="string" />
+    </PropertyManifest>
+  </Properties>
+</ComponentManifest>
