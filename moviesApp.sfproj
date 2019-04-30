@@ -74,5 +74,9 @@
       <ReferencedIdentity value="UrlRouter.69a71809c45249cbb2999d13bb9100c0" />
       <ReferencedVersion value="3.0.1" />
     </PackageReference>
+    <PackageReference Alias="EventDispatcher" IsComponentLib="True" Origin="..\cards5\EventDispatcher\EventDispatcher.package">
+      <ReferencedIdentity value="EventDispatcher.eb764ceb30274f1e9a3d051d512d6b26" />
+      <ReferencedVersion value="1.0.1" />
+    </PackageReference>
   </PackageReferences>
 </ProjectRoot>

@@ -23,5 +23,8 @@
         </UrlRouteCfg>
       </routes>
     </UrlRouter>
+    <BreadcrumbsCtrl identity="Breadcrumbs.4d3eeadca3c54f1caa1d677db7e07acb">
+      <Name value="breadcrumbsCtrl" />
+    </BreadcrumbsCtrl>
   </ApiObjects>
 </GlobalApiObjects>

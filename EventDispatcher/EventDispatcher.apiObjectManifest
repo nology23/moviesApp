@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<ApiObjectManifest>
+  <Name value="EventDispatcher" />
+  <CanBeGlobal value="False" />
+  <Generator value="eventDispatcher.js" />
+  <Events>
+    <EventManifest>
+      <Name value="OnMessage" />
+      <Parameters>
+        <EventParameterManifest>
+          <Name value="source" />
+          <BaseType value="String" />
+          <ParamType value="BaseType" />
+        </EventParameterManifest>
+        <EventParameterManifest>
+          <Name value="type" />
+          <BaseType value="String" />
+          <ParamType value="BaseType" />
+        </EventParameterManifest>
+        <EventParameterManifest>
+          <Name value="data" />
+          <BaseType value="String" />
+          <ParamType value="BaseType" />
+        </EventParameterManifest>
+      </Parameters>
+    </EventManifest>
+  </Events>
+  <Methods>
+    <MethodManifest>
+      <Name value="sendMessage" />
+      <ReturnType />
+      <Parameters>
+        <ParameterManifest>
+          <BaseType value="String" />
+          <Name value="source" />
+        </ParameterManifest>
+        <ParameterManifest>
+          <BaseType value="String" />
+          <Name value="type" />
+        </ParameterManifest>
+        <ParameterManifest>
+          <BaseType value="String" />
+          <Name value="data" />
+        </ParameterManifest>
+      </Parameters>
+    </MethodManifest>
+  </Methods>
+</ApiObjectManifest>

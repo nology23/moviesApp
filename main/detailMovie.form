@@ -799,7 +799,16 @@
     <ActionBlock>
       <Name value="init" />
       <ActionLangBody IsValid="True">
-        <Script><![CDATA[var movieData = apiobjects.serverConnection.getAsync("record?id=" + form.id)
+        <Script><![CDATA[if apiobjects.breadcrumbsCtrl.count() = 2 then
+	apiobjects.breadcrumbsCtrl.removeTo(1)
+	apiobjects.breadcrumbsCtrl.addBreadcrumb("breadcrumbs", "Movie Detail", "", "", false)
+	else
+	apiobjects.breadcrumbsCtrl.removeTo(2)	
+endif
+if apiobjects.breadcrumbsCtrl.count() = 1 then
+		apiobjects.breadcrumbsCtrl.addBreadcrumb("breadcrumbs", "Movie Detail", "", "", false)
+	endif
+var movieData = apiobjects.serverConnection.getAsync("record?id=" + form.id)
 if movieData.isError() then
 	system.consoleError(movieData.getErrorMessage())
 else

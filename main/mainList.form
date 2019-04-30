@@ -2257,7 +2257,12 @@
     <ActionBlock>
       <Name value="init" />
       <ActionLangBody IsValid="True">
-        <Script><![CDATA[apiobjects.urlRouter.clearUrl()
+        <Script><![CDATA[if apiobjects.breadcrumbsCtrl.count() = 0 then
+	apiobjects.breadcrumbsCtrl.addBreadcrumb("breadcrumbs", "Main", "", "", false)
+else
+	apiobjects.breadcrumbsCtrl.removeTo(1)
+endif
+apiobjects.urlRouter.clearUrl()
 // load movies list
 var x = apiobjects.serverConnection.getAsync("list")
 var y = x.getJsonString()
@@ -2284,7 +2289,14 @@ system.console(y)]]></Script>
       <Name value="handler_btnAddMovie_OnClick" />
       <IsPrivate value="True" />
       <ActionLangBody IsValid="True">
-        <Script><![CDATA[form.addMovie = true
+        <Script><![CDATA[if apiobjects.breadcrumbsCtrl.count() = 1 then
+	apiobjects.breadcrumbsCtrl.addBreadcrumb("breadcrumbs", "Add Movie", "", "", false)
+else
+	apiobjects.breadcrumbsCtrl.removeTo(1)
+	apiobjects.breadcrumbsCtrl.addBreadcrumb("breadcrumbs", "Add Movie", "", "", false)
+endif
+
+form.addMovie = true
 form.searchMovie = false
 form.deleteVisible = false
 form.editVisible = false
@@ -2316,7 +2328,15 @@ if form.filter.hasValue() then
 	form.typeVisible = false
 endif
 
-form.actions.init()]]></Script>
+form.actions.init()
+
+if apiobjects.breadcrumbsCtrl.count() = 1 then
+	apiobjects.breadcrumbsCtrl.addBreadcrumb("breadcrumbs", "Search", "", "", false)
+else
+	apiobjects.breadcrumbsCtrl.removeTo(1)
+	apiobjects.breadcrumbsCtrl.addBreadcrumb("breadcrumbs", "Search", "", "", false)
+endif
+]]></Script>
       </ActionLangBody>
       <DataContext>
         <ActionDataContext />
@@ -2550,6 +2570,13 @@ if form.searchSort.enumValue() = "actorName" then
 	form.actorNameVisible = true
 else
 	form.actorNameVisible = false
+endif
+
+if apiobjects.breadcrumbsCtrl.count() = 1 then
+	apiobjects.breadcrumbsCtrl.addBreadcrumb("breadcrumbs", "Search", "", "", false)
+else
+	apiobjects.breadcrumbsCtrl.removeTo(1)
+	apiobjects.breadcrumbsCtrl.addBreadcrumb("breadcrumbs", "Search", "", "", false)
 endif]]></Script>
       </ActionLangBody>
       <DataContext>
@@ -2655,7 +2682,15 @@ endif
 
 if form.searchSort.isTouched() then
 	form.actions.init()
-endif]]></Script>
+	if apiobjects.breadcrumbsCtrl.count() = 1 then
+	apiobjects.breadcrumbsCtrl.addBreadcrumb("breadcrumbs", "Search", "", "", false)
+	else
+		apiobjects.breadcrumbsCtrl.removeTo(1)
+		apiobjects.breadcrumbsCtrl.addBreadcrumb("breadcrumbs", "Search", "", "", false)
+	endif
+endif
+
+]]></Script>
       </ActionLangBody>
       <DataContext>
         <ActionDataContext />
