@@ -997,12 +997,12 @@
               <Children>
                 <EnumCombo>
                   <Name value="searchSort" />
+                  <Caption value="Search By" />
                   <Panel.Height value="#" />
                   <Panel.Width value="300px" />
                   <Bindings>
-                    <Binding SourceProperty="Data" Expression="searchSort" />
                     <Binding SourceProperty="IsRequiredMarkVisible" Expression="searchSort.isRequired()" />
-                    <Binding SourceProperty="Caption" Expression="searchSort.caption()" />
+                    <Binding SourceProperty="Data" Expression="searchSort" />
                   </Bindings>
                   <CssClass>
                     <CssClassConditional>
@@ -1037,7 +1037,6 @@
                   <Panel.Height value="#" />
                   <Panel.Width value="50%" />
                   <PanelClass value="" />
-                  <useContains value="False" />
                   <Bindings>
                     <Binding SourceProperty="Data" Expression="form.filter.list" />
                     <Binding SourceProperty="IsVisible" Expression="form.nameVisible" />
@@ -2299,11 +2298,13 @@
       <Name value="init" />
       <ActionLangBody IsValid="True">
         <Script><![CDATA[if apiobjects.breadcrumbsCtrl.count() = 0 then
-	apiobjects.breadcrumbsCtrl.addBreadcrumb("breadcrumbs", "Main", "", "", false)
+	apiobjects.breadcrumbsCtrl.addBreadcrumb("main", "Main", "", "", true)
 else
 	apiobjects.breadcrumbsCtrl.removeTo(1)
 endif
+
 apiobjects.urlRouter.clearUrl()
+
 // load movies list
 var x = apiobjects.serverConnection.getAsync("list")
 var y = x.getJsonString()
@@ -2316,7 +2317,7 @@ form.moviesVisibility = true
 form.searchVisibility = false
 form.deleteVisible = false
 form.editVisible = true
-
+globals.visibleButtons = false
 
 
 system.console(y)]]></Script>
@@ -2429,8 +2430,11 @@ if form.complex.id = params.data.id then
 	form.confirmResult = apiobjects.page.confirm("Do you really want to delete " + params.data.name + " " + params.data.type + " from your database?")
 	if form.confirmResult = true then
 		apiobjects.serverConnection.postAsync("delete", form.complex.toJson())
+		var urlClear = apiobjects.urlRouter.findFormUrl(params.data.id)
+		urlClear.updatePageUrl()
 	endif
 endif
+
 
 navigation.main.mainList.go()]]></Script>
       </ActionLangBody>
@@ -2695,6 +2699,8 @@ if form.complex.id = params.data.id then
 	form.confirmResult = apiobjects.page.confirm("Do you really want to delete " + params.data.name + " " + params.data.type + " from your database?")
 	if form.confirmResult = true then
 		apiobjects.serverConnection.postAsync("delete", form.complex.toJson())
+		var urlClear = apiobjects.urlRouter.findFormUrl(params.data.id)
+		urlClear.updatePageUrl()
 	endif
 endif
 
@@ -2833,6 +2839,21 @@ endif]]></Script>
         <ActionDataContext />
       </DataContext>
     </ActionBlock>
+    <ActionBlock>
+      <Name value="handler_eventDispatcher1_OnMessage" />
+      <IsPrivate value="True" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[if params.type = "breadcrumbsClick" then
+	if params.data = "main" then		
+		navigation.main.mainList.go()
+	endif
+endif
+]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
   </Actions>
   <ApiObjects>
     <Codelist identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
@@ -2863,5 +2884,11 @@ endif]]></Script>
       <listName value="list" />
       <server reference="+GlobalApiObjects.serverConnection" />
     </DeclListQuery>
+    <EventDispatcher identity="EventDispatcher.eb764ceb30274f1e9a3d051d512d6b26">
+      <Name value="eventDispatcher1" />
+      <OnMessage>
+        <ActionEvent ReferencedAction="~handler_eventDispatcher1_OnMessage" />
+      </OnMessage>
+    </EventDispatcher>
   </ApiObjects>
 </Form>

@@ -30,6 +30,9 @@
           <controller reference="+GlobalApiObjects.breadcrumbsCtrl" />
           <Panel.Height value="#" />
           <Panel.Width value="*" />
+          <OnItemClick>
+            <ActionEvent ReferencedAction="~handler_breadcrumbs1_OnItemClick" />
+          </OnItemClick>
         </Breadcrumbs>
         <FormPlaceholder>
           <Name value="formPlaceholder1" />
@@ -49,4 +52,21 @@
   <DataContext>
     <DataContext />
   </DataContext>
+  <Actions>
+    <ActionBlock>
+      <Name value="handler_breadcrumbs1_OnItemClick" />
+      <IsPrivate value="True" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[form.apiobjects.eventDispatcher1.sendMessage("master", "breadcrumbsClick", params.id)]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+  </Actions>
+  <ApiObjects>
+    <EventDispatcher identity="EventDispatcher.eb764ceb30274f1e9a3d051d512d6b26">
+      <Name value="eventDispatcher1" />
+    </EventDispatcher>
+  </ApiObjects>
 </Form>

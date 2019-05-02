@@ -24,6 +24,9 @@
               <OnClick>
                 <ActionEvent ReferencedAction="~handler_btnMain_OnClick" />
               </OnClick>
+              <Bindings>
+                <Binding SourceProperty="IsVisible" Expression="globals.visibleButtons" />
+              </Bindings>
               <CssClass>
                 <CssClassConditional>
                   <ClassName value="{theme}-button" />
@@ -39,6 +42,9 @@
               <OnClick>
                 <ActionEvent ReferencedAction="~handler_btnDetail_OnClick" />
               </OnClick>
+              <Bindings>
+                <Binding SourceProperty="IsVisible" Expression="globals.visibleButtons" />
+              </Bindings>
               <CssClass>
                 <CssClassConditional>
                   <ClassName value="{theme}-button" />
@@ -85,6 +91,7 @@
                 <LabeledText identity="labeledText.a92a691d6915448ebf9f0b804ce6a733">
                   <Name value="labeledText1" />
                   <Caption value="ID" />
+                  <IsVisible value="False" />
                   <Panel.Height value="#" />
                   <Panel.Width value="300px" />
                   <Bindings>
@@ -1123,10 +1130,10 @@
       <Name value="init" />
       <ActionLangBody IsValid="True">
         <Script><![CDATA[if apiobjects.breadcrumbsCtrl.count() = 2 then
-	apiobjects.breadcrumbsCtrl.addBreadcrumb("breadcrumbs", "Edit", "", "", false)
+	apiobjects.breadcrumbsCtrl.addBreadcrumb("edit", "Edit", "", "", false)
 else
-	apiobjects.breadcrumbsCtrl.addBreadcrumb("breadcrumbs", "Movie Detail", "", "", false)
-	apiobjects.breadcrumbsCtrl.addBreadcrumb("breadcrumbs", "Edit", "", "", false)
+	apiobjects.breadcrumbsCtrl.addBreadcrumb("detail", "Movie Detail", "", "", true)
+	apiobjects.breadcrumbsCtrl.addBreadcrumb("edit", "Edit", "", "", false)
 endif
 
 
@@ -1158,7 +1165,10 @@ system.console(movieData.getJsonString())]]></Script>
       <Name value="handler_btnMain_OnClick" />
       <IsPrivate value="True" />
       <ActionLangBody IsValid="True">
-        <Script><![CDATA[navigation.main.mainList.go()]]></Script>
+        <Script><![CDATA[form.backConfirm = apiobjects.page.confirm("This action will cancel all your changes. Do you want that?")
+if form.backConfirm = true then
+	navigation.main.mainList.go()
+endif]]></Script>
       </ActionLangBody>
       <DataContext>
         <ActionDataContext />
@@ -1286,12 +1296,14 @@ endif]]></Script>
       <Name value="handler_btnSave_OnClick" />
       <IsPrivate value="True" />
       <ActionLangBody IsValid="True">
-        <Script><![CDATA[form.saveConfirm = apiobjects.page.confirm("Do you really want to save all changes?")
-if form.saveConfirm = true then
-	apiobjects.serverConnection.postAsync("update", form.complexEdit.toJson())
-	navigation.main.detailMovie.go(params.data.id)
-else
-	navigation.main.detailMovie.go(params.data.id)
+        <Script><![CDATA[if form.complexEdit.isValid() then
+	form.saveConfirm = apiobjects.page.confirm("Do you really want to save all changes?")
+	if form.saveConfirm = true then
+		apiobjects.serverConnection.postAsync("update", form.complexEdit.toJson())
+		navigation.main.detailMovie.go(params.data.id)
+	else
+		navigation.main.detailMovie.go(params.data.id)
+	endif
 endif]]></Script>
       </ActionLangBody>
       <DataContext>
@@ -1308,5 +1320,37 @@ endif]]></Script>
         <ActionDataContext />
       </DataContext>
     </ActionBlock>
+    <ActionBlock>
+      <Name value="handler_eventDispatcher1_OnMessage" />
+      <IsPrivate value="True" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[form.backConfirm = apiobjects.page.confirm("This action will cancel all your changes. Do you want that?")
+if form.backConfirm = true then
+	if params.type = "breadcrumbsClick" then
+		if params.data = "main" then		
+			navigation.main.mainList.go()
+		endif
+	endif
+
+	if params.type = "breadcrumbsClick" then
+		if params.data = "detail" then		
+			navigation.main.detailMovie.go(this.form.id)
+		endif
+	endif	
+endif
+]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
   </Actions>
+  <ApiObjects>
+    <EventDispatcher identity="EventDispatcher.eb764ceb30274f1e9a3d051d512d6b26">
+      <Name value="eventDispatcher1" />
+      <OnMessage>
+        <ActionEvent ReferencedAction="~handler_eventDispatcher1_OnMessage" />
+      </OnMessage>
+    </EventDispatcher>
+  </ApiObjects>
 </Form>

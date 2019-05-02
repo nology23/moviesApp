@@ -2,4 +2,15 @@
 <?data-format version="0.400"?>
 <GlobalVariables>
   <Name value="globalVariables" />
+  <Children>
+    <Attribute>
+      <Name value="visibleButtons" />
+      <Caption value="Visible buttons" />
+      <DeclaredType>
+        <AttributeType>
+          <BaseType value="Bool" />
+        </AttributeType>
+      </DeclaredType>
+    </Attribute>
+  </Children>
 </GlobalVariables>

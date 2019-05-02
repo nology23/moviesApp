@@ -24,6 +24,9 @@
               <OnClick>
                 <ActionEvent ReferencedAction="~handler_bntBack_OnClick" />
               </OnClick>
+              <Bindings>
+                <Binding SourceProperty="IsVisible" Expression="globals.visibleButtons" />
+              </Bindings>
               <CssClass>
                 <CssClassConditional>
                   <ClassName value="{theme}-button" />
@@ -801,12 +804,12 @@
       <ActionLangBody IsValid="True">
         <Script><![CDATA[if apiobjects.breadcrumbsCtrl.count() = 2 then
 	apiobjects.breadcrumbsCtrl.removeTo(1)
-	apiobjects.breadcrumbsCtrl.addBreadcrumb("breadcrumbs", "Movie Detail", "", "", false)
+	apiobjects.breadcrumbsCtrl.addBreadcrumb("detail", "Movie Detail", "", "", true)
 	else
 	apiobjects.breadcrumbsCtrl.removeTo(2)	
 endif
 if apiobjects.breadcrumbsCtrl.count() = 1 then
-		apiobjects.breadcrumbsCtrl.addBreadcrumb("breadcrumbs", "Movie Detail", "", "", false)
+		apiobjects.breadcrumbsCtrl.addBreadcrumb("detail", "Movie Detail", "", "", true)
 	endif
 var movieData = apiobjects.serverConnection.getAsync("record?id=" + form.id)
 if movieData.isError() then
@@ -861,5 +864,27 @@ url.updatePageUrl()]]></Script>
         <ActionDataContext />
       </DataContext>
     </ActionBlock>
+    <ActionBlock>
+      <Name value="handler_eventDispatcher1_OnMessage" />
+      <IsPrivate value="True" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[if params.type = "breadcrumbsClick" then
+	if params.data = "main" then		
+		navigation.main.mainList.go()
+	endif
+endif]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
   </Actions>
+  <ApiObjects>
+    <EventDispatcher identity="EventDispatcher.eb764ceb30274f1e9a3d051d512d6b26">
+      <Name value="eventDispatcher1" />
+      <OnMessage>
+        <ActionEvent ReferencedAction="~handler_eventDispatcher1_OnMessage" />
+      </OnMessage>
+    </EventDispatcher>
+  </ApiObjects>
 </Form>
